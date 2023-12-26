@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--
+    Basic Page Needs
+    ==================================================
+    -->
+   <meta charset="utf-8">
+   <title>  Rising Digitally | Influencer Marketing</title>
+   <!--
+    Mobile Specific Metas
+    ==================================================
+    -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <!--
+    CSS
+    ==================================================
+    -->
+     <!--Fav Icon-->
+     <link rel="icon" type="image/x-icon" href="/images/icon/Fav-icon.png">
+   <!-- Bootstrap-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Animation-->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- Morris CSS -->
+   <link rel="stylesheet" href="css/morris.css">
+   <!-- FontAwesome-->
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <!-- Icon font-->
+   <link rel="stylesheet" href="css/icon-font.css">
+   <!-- Owl Carousel-->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <!-- Owl Theme -->
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!-- Colorbox-->
+   <link rel="stylesheet" href="css/colorbox.css">
+   <!-- Template styles-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive styles-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
+   <!--if lt IE 9
+    script(src='js/html5shiv.js')
+    script(src='js/respond.min.js')
+    -->
+</head>
+<style>
+   
+.faq-container {
+   width: 100%;
+   background-color: #000;
+   border-radius: 10px;
+   box-shadow: 0 0 10px #fff;
+ }
+ 
+ .faq-item {
+   padding: 20px;
+   border-bottom: 1px solid #e0e0e0;
+   cursor: pointer;
+   transition: background-color 0.3s ease-in-out;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .faq-item:last-child {
+   border-bottom: none;
+ }
+ 
+ .faq-question {
+   font-size: 18px;
+   font-weight: 700;
+   padding-bottom: 3px;
+   color: #fff;
+ }
+ 
+ .faq-answer {
+   font-size: 16px;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.3s ease-in-out;
+   padding-left: 10px;
+   padding-right: 10px;
+   color: #fff;
+
+ }
+ 
+ .faq-answer.active {
+   border-bottom: 1px solid #fff;
+ }
+ 
+ .icon-container i {
+   color: #000;
+   font-size: 16px;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+ }
+ 
+ .icon-container i.active {
+   transform: rotate(90deg);
+ }
+
+ 
+ header {
+   background-color: #58BDB3;
+   color: black;
+  
+ }
+
+ .mection {
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #58BDB3;
+   box-shadow: 10 10 10px rgba(153, 46, 46, 0.1);
+   border-radius: 20px;
+   border-bottom: 12px solid #EE4E27;
+   border-right: 12px solid #EE4E27;
+   
+
+ }
+
+
+ .cta-button {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #ECAF42;
+   color: #000;
+   text-decoration: none;
+   border-radius: 15px;
+   font-weight: bold;
+ }
+</style>
+<body>
+
+   <div class="body-inner">
+
+      <div class="site-top-2"> 
+         <header class="header nav-down" id="header-2"> 
+            <!-- <div class="container">
+               <div class="row"> -->
+                  <!-- <div class="logo-area clearfix">
+                     <div class="logo col-lg-3 col-md-12">
+                        <a href="index.html">
+                           <img src="images/rd_logo.png" alt="">
+                        </a>
+                     </div>
+                     <!- logo end-->
+                     <!-- <div class="col-lg-9 col-md-12 pull-right">
+                        <ul class="top-info unstyled">
+                           <!- <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">24/7 Response Time</p>
+                                 <p class="info-subtitle">(+44) 7456 44098</p>
+                              </div>
+                           </li> -->
+                           <!-- <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">Send Your Query</p>
+                                 <p class="info-subtitle">info@risingdigitally.com</p>
+                              </div>
+                           </li> -->
+                          
+                        <!-- </ul>
+                     </div>  -->
+                     <!-- Col End-->
+                  <!-- </div>  -->
+                 
+                  <!-- Logo Area End-->
+               <!-- </div> 
+            </div> -->
+             <!-- <hr> -->
+           
+            <!-- Container end-->
+            <div class="site-nav-inner site-navigation navigation navdown">
+               <div class="container">
+                  <nav class="navbar navbar-expand-lg ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span></button>
+                     <!-- End of Navbar toggler-->
+
+                     <a href="index.html">
+                        <img src="images/rd_logo.png" alt="">
+                     </a>
+
+                    
+                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                           <li class="nav-item dropdown "><a class="nav-link" href="index.html">Home</a>
+                             
+                          
+                              
+                  
+                           <!-- li end-->
+                           <li class="nav-item dropdown ">
+                                 <a href="about.html">About Us</a>
+                           </li>
+
+                               <li class="nav-item dropdown active">
+                              <a class="nav-link " href="" data-toggle="dropdown">
+                       Services
+                         <i class="fa fa-angle-down"></i>
+                       </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="service.html">All Services</a></li>
+                                <li class="active"><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                                <li><a href="socialmediamanagement.html">Social Media Management</a></li>
+                                <li><a href="graphicdesigning.html">Graphic Designining</a></li>
+                                <li><a href="videoediting.html">Video Editing</a></li>
+                                <li><a href="facebookads.html">Facebook Ads</a></li>
+                                <li><a href="websitedevelopment.html">Website Development</a></li>
+                            </ul>
+                           </li>
+                           <!-- li end-->
+
+                   
+
+                         <!-- li end-->
+                         <li class="nav-item dropdown">
+                           <a href="casestudies.html">casestudies</a>
+
+                           
+                         </li>
+
+                         <li class="nav-item dropdown">
+                           <a href="letstalk.html">Lets Talk</a>
+
+                           
+                         </li>
+                         <li class="nav-item dropdown">
+                           <a href="./for-influencer.html">For Influencers</a>
+
+                         </li>
+                        </ul>
+                        <!--Nav ul end-->
+                     </div>
+                     <!-- <a href="contact.html" class="top-right-btn btn btn-primary">Let's Talk</a> -->
+                     <!-- Top bar btn -->
+                  </nav>
+                  <!-- Collapse end-->
+
+                  
+                  
+               </div>
+            </div>
+            <!-- Site nav inner end-->
+         </header>
+         <!-- Header end-->
+      </div>
+
+      <div class="banner-area" id="banner-area" style="background-image:url(images/banner/influencer_marketing.webp);">
+         <div class="container">
+            <div class="row ">
+               <div class="col">
+                  <div class="banner-heading justify-content-center">
+                     <h1 class="banner-title"><center>Influencer Marketing</center></h1>
+                   
+                  </div>
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Row end-->
+         </div>
+         <!-- Container end-->
+      </div>
+      <!-- Banner area end-->
+      <br><br>
+      <div class="container">
+         <div class="row">
+           <div class="col-lg-6">
+            <section class="mection">
+               <h3 style="color: #000;">Your Last Stop for Exceptional Influencer Marketing Impact</h3>
+               <p style="color: #000;">Your Spectrum of Influencers with 1k+ Creators Across Diverse Niches</p>
+               <p style="color: #000;">Superior Value, Flexible Pricing, Maximize Your ROI</p>
+
+               <p style="color: #000;">Advocated by 100+ Premier Brands Worldwide</p>
+               <a href="#get-started" class="cta-button">Get Started</a>
+             </section>
+           </div>
+           <div class="col-lg-6" style="margin-top: -40px;">
+            <img class="img-fluid" src="./images/services/midwali.png" alt="">
+<br>
+           </div>
+           <div class="col-lg-6" style="margin-top: -50px;">
+            <center><img class="img-fluid" src="./images/services/3rd-one.png" alt=""></center>
+
+           </div> <br><br>
+           <div class="col-lg-6">
+            <section class="mection">
+               <h3 style="color: #000;">Influence that Promote Your Gateway to Market Domination</h3>
+               <p style="color: #000;">A world where your brand's story is told not by words alone but through the authentic voices of those your audience trusts most. 
+                  Rising Digitally isn't just a service provider, we're your gateway to an empire where every like, share, and comment is a step toward unmatched brand love and loyalty.
+                  </p>
+               <a href="#get-started" class="cta-button">Get Started</a>
+             </section>
+           </div>
+           <div class="col-lg-6">
+            <section class="mection">
+               <h3 style="color: #000;">Campaigns That Don’t Just ‘Perform’—But Win The Hearts</h3>
+               <p style="color: #000;">When you partner with Rising Digitally, you're not just getting posts, you're signing up for masterpieces of digital influence. We're in the business of creating connections that do more than engage.</p>
+               <a href="#get-started" class="cta-button">Get Started</a>
+             </section>
+           </div>
+           <div class="col-lg-6" style="margin-top: -100px;"> 
+            <img class="img-fluid" src="./images/services/5516269_2857741-removebg-preview.png" alt="">
+         </div>
+         </div>
+       </div>      <br>
+      <section class="ts-services solid-bg" id="ts-services">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-md-12">
+                  <h2 class="section-title"><span style="color: #58BDB3;">Influencer Marketing Services</span>Elevating Your Brand To The Heights Of Success</h2>
+               </div>
+            </div>
+            <!-- Title row end-->
+            <div class="row ts-service-row-box">
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/Youtube-copy (2).webp" width="auto" height="auto" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;"> Youtube Influencer Marketing</h4>
+                        <p>Experience the world of video storytelling. Engage, inspire, and convert with the power of YouTube.</p>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p> 
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/Instagram-copy (1).webp" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">Instagram Influencer Marketing</h4>
+                      <p>Capture the essence of your brand in every frame. Let's make you the talk of the world.</p>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/product-explain-300.webp" width="100%" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">Micro Influencers</h4>
+                       <p>Big isn't always better. Connect with niche audiences who resonate with your brand's ethos.
+                       </p>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Content row end-->
+            <div class="gap-60"></div>
+            <div class="row ts-service-row-box">
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/Meme-copy (1).webp" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">Meme Marketing</h4>
+                        <p>Because a bit of humor goes a long way. Let's make your brand go viral, one meme at a time.</p>
+                          <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/UGC-copy.webp" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">UGC Video Production</h4>
+                        <p>Real stories from real people. Develop trust with user-generated content.</p>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/Celebrity-Endorsement-copy.webp" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">Celebrity Endorsement </h4>
+                        <p>When star power meets brand power. Promote your brand's status with celebrity collaborations.</p>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+
+                 
+                  </div>
+                  <!-- Service1 end-->
+                  
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Content row end-->
+         </div>
+         <!-- Container end-->
+      </section>
+      <!-- Service end-->
+<br>
+<div class="faq-container container"> <br>
+   <div class="row text-center">
+      <div class="col-md-12">
+         <h2 class="section-title"><span style="color: #58BDB3;"></span>FAQ</h2>
+      </div>
+   </div>
+   <div class="faq-item">
+       <div class="faq-question">Q1.  How does Rising Digitally elevate my brand with influencer marketing?</div>
+       <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+   </div>
+   <div class="faq-answer">
+       <p>At Rising Digitally, we create strategy with storytelling to launch your brand into the digital spotlight. Our experts tailor campaigns that not only showcase your brand but also strike a chord with audiences, creating lasting impressions and driving meaningful engagement.</p>
+   </div>
+   <div class="faq-item">
+       <div class="faq-question">Q2. Can Rising Digitally's influencer marketing services integrate with my existing marketing strategy?</div>
+       <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+   </div>
+   <div class="faq-answer">
+       <p>Absolutely! Our team specializes in creating strategies that complement and enhance your existing marketing efforts. We ensure influencer campaigns work in sync with your brand's vision, amplifying the results of your current marketing initiatives.</p>
+   </div>
+   <div class="faq-item">
+       <div class="faq-question">Q3. What sets Rising Digitally apart when it comes to choosing influencers for my brand?</div>
+       <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+   </div>
+   <div class="faq-answer">
+       <p>Our selection process is data-driven and heart-led. We dive deep into understanding your brand ethos and match you with influencers who share similar values and voices, ensuring an authentic and impactful partnership.
+      </p>
+   </div>
+   <div class="faq-item">
+      <div class="faq-question">Q4. How transparent is the influencer marketing process with Rising Digitally?</div>
+      <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+  </div>
+  <div class="faq-answer">
+      <p>, Transparency is the backbone of trust. From influencer selection to performance tracking, we keep you in the loop every step of the way. Our reports are comprehensive yet understandable, ensuring you witness the growth and success of your campaigns firsthand.
+
+     </p>
+  </div>
+  <div class="faq-item">
+   <div class="faq-question">Q5.  Will my brand's voice be consistent across different platforms and influencers?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p>Consistency is key, and at Rising Digitally, we craft a cohesive narrative that resonates across all platforms. No matter the influencer or the medium, your brand's voice will remain unmistakable and true to its core.
+  </p>
+</div>
+<div class="faq-item">
+   <div class="faq-question">Q6. How quickly can I expect to see results from my influencer marketing campaign?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p>The digital world moves fast, and so do we. While the timeline for visible results can vary, our strategic approach is designed to build momentum quickly, ensuring your brand captures attention and gains traction on time.
+
+  </p>
+</div>
+<div class="faq-item">
+   <div class="faq-question">Q7. What kind of support can I expect throughout the influencer marketing campaign?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p>Think of us as your co-pilots in digital marketing. From strategic planning to post-campaign analysis, our team provides unwavering support and insights to help your campaign soar to new heights.
+  </p>
+</div>
+<div class="faq-item">
+   <div class="faq-question">Q8. How does Rising Digitally keep up with the changing trends in influencer marketing?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p> We are digital trendsetters. Our team stays ahead of the curve, continuously adapting to the ever-evolving digital landscape to ensure your influencer campaigns are fresh, relevant, and impactful.
+
+  </p>
+</div>
+</div>
+<br>
+
+        <!-- Footer start-->
+        <footer class="footer" id="footer">
+         <div class="footer-main bg-overlay">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4 col-md-12 footer-widget footer-about">
+                     <div class="footer-logo">
+                        <img src="images/rd_logo.png" alt="">
+                     </div>
+                     <p>Rising Digitally is a UK-based influencer marketing agency that specializes in harnessing the power of online platforms to connect brands with their target audiences. <br><span style="font-family: 'Courier New', Courier, monospace; font-size: 18px;">This is where we Excel...</span></p>
+                     
+                     <!-- <h3 class="widget-title">Subscribe Newsletter!</h3> -->
+                     <!-- <form class="newsletter-form" id="newsletter-form" action="#" method="post">
+                        <div class="form-group">
+                           <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email" placeholder="Email "
+                              autocomplete="off">
+                           <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                     </form> -->
+                  </div>
+                  <!-- About us end-->
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Quick Links</h3>
+                     <ul class="list-dash">
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                      <li><a href="casestudies.html">CaseStudies</a></li>
+                      <li><a href="facebookads.html">Facebook Ads</a></li>
+                      <li><a href="https://calendly.com/risingdigitally"> Free Consultation</a></li>
+                      <li><a href="websitedevelopment.html">Website Development</a></li>
+                      <li><a href="socialmediamanagement.html">SMM</a></li>
+                      <li><a href="graphicdesigning.html">Graphic Designing</a></li>
+                      <li><a href="videoediting.html">Video Editing</a></li>
+                     <li><a href="letstalk.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Company Locations</h3>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-map-marker2"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Address</h3>
+                           <p>128 City Road, London, UK</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     
+                     <div class="ts-contact-info last"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-envelope"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Email Address</h3>
+                           <p>info@risingdigitally.com</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-phone3"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Phone Number</h3>
+                           <p>+44 7456 44098</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                  </div>
+               </div>
+               <!-- Content row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Footer Main-->
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                     <div class="copyright-info"><span>Copyright © 2023 by Rising Digitally</span></div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="footer-social text-right">
+                     <ul>
+                        <li><a href="https://www.facebook.com/Risingdigitally"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/rising-digitally/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/rising_digitally/"><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- Row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Copyright end-->
+      </footer>
+      <!-- Footer end-->
+
+      <div class="back-to-top affix" id="back-to-top" data-spy="affix" data-offset-top="10">
+         <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i>
+            <!-- icon end-->
+         </button>
+         <!-- button end-->
+      </div>
+      <!-- End Back to Top-->
+
+      <!--
+      Javascript Files
+      ==================================================
+      -->
+      <script>
+         const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.nextElementSibling;
+  const icon = item.querySelector('i');
+
+  item.addEventListener('click', () => {
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        const otherAnswer = otherItem.nextElementSibling;
+        const otherIcon = otherItem.querySelector('i');
+
+        otherAnswer.classList.remove('active');
+        otherIcon.classList.remove('active');
+        otherAnswer.style.maxHeight = "0";
+      }
+    });
+
+    answer.classList.toggle('active');
+    icon.classList.toggle('active');
+    if (answer.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = "0";
+    }
+  });
+});
+      </script>
+      <!-- initialize jQuery Library-->
+      <script type="text/javascript" src="js/jquery.js"></script>
+       
+       
+      <!-- Bootstrap jQuery-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Owl Carousel-->
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <!-- Counter-->
+      <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+      <!-- Waypoints-->
+      <script type="text/javascript" src="js/waypoints.min.js"></script>
+      <!-- Color box-->
+      <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+       
+        
+      <!-- Template custom-->
+      <script type="text/javascript" src="js/custom.js"></script>
+   </div>
+   <!--Body Inner end-->
+</body>
+
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--
+    Basic Page Needs
+    ==================================================
+    -->
+   <meta charset="utf-8">
+   <title>  Rising Digitally | Graphic Designing</title>
+   <!--
+    Mobile Specific Metas
+    ==================================================
+    -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <!--
+    CSS
+    ==================================================
+    -->
+     <!--Fav Icon-->
+     <link rel="icon" type="image/x-icon" href="/images/icon/Fav-icon.png">
+   <!-- Bootstrap-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Animation-->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- Morris CSS -->
+   <link rel="stylesheet" href="css/morris.css">
+   <!-- FontAwesome-->
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <!-- Icon font-->
+   <link rel="stylesheet" href="css/icon-font.css">
+   <!-- Owl Carousel-->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <!-- Owl Theme -->
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!-- Colorbox-->
+   <link rel="stylesheet" href="css/colorbox.css">
+   <!-- Template styles-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive styles-->
+   <link rel="stylesheet" href="css/responsive.css">
+
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
+   <!--if lt IE 9
+    script(src='js/html5shiv.js')
+    script(src='js/respond.min.js')
+    -->
+    <style>
+      .faq-container {
+         width: 100%;
+         background-color: #000;
+         border-radius: 10px;
+         box-shadow: 0 0 10px #fff;
+       }
+       
+       .faq-item {
+         padding: 20px;
+         border-bottom: 1px solid #e0e0e0;
+         cursor: pointer;
+         transition: background-color 0.3s ease-in-out;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+       }
+       
+       .faq-item:last-child {
+         border-bottom: none;
+       }
+       
+       .faq-question {
+         font-size: 18px;
+         font-weight: 700;
+         padding-bottom: 3px;
+         color: #fff;
+       }
+       
+       .faq-answer {
+         font-size: 16px;
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.3s ease-in-out;
+         padding-left: 10px;
+         padding-right: 10px;
+         color: #fff;
+      
+       }
+       
+       .faq-answer.active {
+         border-bottom: 1px solid #fff;
+       }
+       
+       .icon-container i {
+         color: #000;
+         font-size: 16px;
+         cursor: pointer;
+         transition: transform 0.3s ease-in-out;
+       }
+       
+       .icon-container i.active {
+         transform: rotate(90deg);
+       }
+      header {
+         background-color: #58BDB3;
+         color: black;
+         padding: 1em 0;
+       }
+      
+       .mection {
+         max-width: 800px;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #58BDB3;
+         box-shadow: 10 10 10px rgba(153, 46, 46, 0.1);
+         border-radius: 20px;
+         border-bottom: 12px solid #EE4E27;
+         border-right: 12px solid #EE4E27;
+         
+      
+       }
+      
+      
+       .cta-button {
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: #ECAF42;
+         color: #000;
+         text-decoration: none;
+         border-radius: 15px;
+         font-weight: bold;
+       }
+   </style>
+</head>
+
+<body>
+
+   <div class="body-inner">
+
+      <div class="site-top-2"> 
+         <header class="header nav-down" id="header-2"> 
+            <!-- <div class="container">
+               <div class="row"> -->
+                  <!-- <div class="logo-area clearfix">
+                     <div class="logo col-lg-3 col-md-12">
+                        <a href="index.html">
+                           <img src="images/rd_logo.png" alt="">
+                        </a>
+                     </div>
+                     <!- logo end-->
+                     <!-- <div class="col-lg-9 col-md-12 pull-right">
+                        <ul class="top-info unstyled">
+                           <!- <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">24/7 Response Time</p>
+                                 <p class="info-subtitle">(+44) 7456 44098</p>
+                              </div>
+                           </li> -->
+                           <!-- <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">Send Your Query</p>
+                                 <p class="info-subtitle">info@risingdigitally.com</p>
+                              </div>
+                           </li> -->
+                          
+                        <!-- </ul>
+                     </div>  -->
+                     <!-- Col End-->
+                  <!-- </div>  -->
+                 
+                  <!-- Logo Area End-->
+               <!-- </div> 
+            </div> -->
+             <!-- <hr> -->
+           
+            <!-- Container end-->
+            <div class="site-nav-inner site-navigation navigation navdown">
+               <div class="container">
+                  <nav class="navbar navbar-expand-lg ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span></button>
+                     <!-- End of Navbar toggler-->
+
+                     <a href="index.html">
+                        <img src="images/rd_logo.png" alt="">
+                     </a>
+
+                    
+                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                           <li class="nav-item dropdown "><a class="nav-link" href="index.html">Home</a>
+                             
+                          
+                              
+                  
+                           <!-- li end-->
+                           <li class="nav-item dropdown ">
+                                 <a href="about.html">About Us</a>
+                           </li>
+
+                               <li class="nav-item dropdown active">
+                              <a class="nav-link " href="" data-toggle="dropdown">
+                       Services
+                         <i class="fa fa-angle-down"></i>
+                       </a>
+                                <ul class="dropdown-menu" role="menu">
+                                <li><a href="service.html">All Services</a></li>
+                                <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                                <li><a href="socialmediamanagement.html">Social Media Management</a></li>
+                                <li class="active"><a href="graphicdesigning.html">Graphic Designining</a></li>
+                                <li><a href="videoediting.html">Video Editing</a></li>
+                                <li><a href="facebookads.html">Facebook Ads</a></li>
+                                <li><a href="websitedevelopment.html">Website Development</a></li>
+                                </ul>
+                           </li>
+                           <!-- li end-->
+
+                   
+
+                         <!-- li end-->
+                         <li class="nav-item dropdown">
+                           <a href="casestudies.html">casestudies</a>
+
+                           
+                         </li>
+
+                         <li class="nav-item dropdown">
+                           <a href="letstalk.html">Lets Talk</a>
+
+                           
+                         </li>
+                         <li class="nav-item dropdown">
+                           <a href="./for-influencer.html">For Influencers</a>
+
+                         </li>
+                        </ul>
+                        <!--Nav ul end-->
+                     </div>
+                     <!-- <a href="contact.html" class="top-right-btn btn btn-primary">Let's Talk</a> -->
+                     <!-- Top bar btn -->
+                  </nav>
+                  <!-- Collapse end-->
+
+                  
+                  
+               </div>
+            </div>
+            <!-- Site nav inner end-->
+         </header>
+         <!-- Header end-->
+      </div>
+
+      <div class="banner-area" id="banner-area" style="background-image:url(images/banner/18-2.webp);">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col">
+                  <div class="banner-heading">
+                     <h1 class="banner-title"><center>Graphic Designing</center></h1>
+                   
+                  </div>
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Row end-->
+         </div>
+         <!-- Container end-->
+      </div>
+      <!-- Banner area end-->
+      <br><br>
+      <div class="container">
+         <h2 style="text-align: left;">Bring Your Brand to Life with Design That Delivers</h2>
+         <h4 style="text-align: left; color:aliceblue">When it comes to standing out, it’s not just about what you say but how you look when you say it. Great graphic design isn’t just about drawing attention; it’s about holding it, telling a story, and inspiring action.
+         </h4>
+         <center>
+         <img class="img-fluid" src="./images/services/brand-identity.png" alt="">
+        </center>
+         <h1 style="text-align: left;">Why Invest in Graphic Design?</h1>
+      <h4 style="text-align: left; color:aliceblue" style="text-align: left;"> Your brand’s image is its handshake with the world, and our designs make it firm and memorable. It’s about crafting a visual experience that turns the heads of your customers and opens their hearts to your message.
+      </h4>
+      <a href="./letstalk.html" class="cta-button">Transform Your Image Today</a>
+
+      </div>
+      <br>
+      <h2 style="text-align: center;">The Benefits of Having Graphic Designers</h2>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <section class="mection">
+                  <h3 style="color: #000;">Empowering Your Brand's Visual Identity</h3>
+                  <p style="color: #000;">Think of our graphic designers as your brand’s personal stylists—they make sure your brand shows up in the digital world dressed to impress. Partner with us, and here’s the edge you gain:
+                  </p>
+                     <!-- <a href="#get-started" class="cta-button">Get Started</a> -->
+                </section>
+              </div> 
+              <div class="col-lg-6"><br>
+               <section class="mection">
+                  <h3 style="color: #000;">Effective Communication:</h3>
+                  <p style="color: #000;">Visuals convey complex messages quickly and effectively, ensuring your audience understands your brand's value.</p>
+                  <!-- <a href="#get-started" class="cta-button">Get Started</a> -->
+                </section>
+              </div>
+           
+             
+              <div class="col-lg-6">
+               <section class="mection">
+                  <h3 style="color: #000;">Consistency Across Channels:</h3>
+                  <p style="color: #000;"> Graphic designers ensure that your brand's visuals are consistent across all platforms.</p>
+                  <!-- <a href="#get-started" class="cta-button">Get Started</a> -->
+                </section>
+              </div>
+              <div class="col-lg-6"> <br>
+               <section class="mection">
+                  <h3 style="color: #000;">Professionalism & Credibility:</h3>
+                  <p style="color: #000;">Well-designed visuals convey trust and professionalism, making your business stand out in a crowded market.</p>
+                  <!-- <a href="#get-started" class="cta-button">Get Started</a> -->
+                </section>
+              </div>
+            
+              <div class="col-lg-6">
+               <section class="mection">
+                  <h3 style="color: #000;">Engagement and Conversion:</h3>
+                  <p style="color: #000;">Satisfying graphics capture attention, increase engagement, and drive conversions, ultimately boosting your bottom line.</p>
+                  <!-- <a href="#get-started" class="cta-button">Get Started</a> -->
+                </section>
+              </div>
+              
+              <div class="col-lg-6"><br>
+               <section class="mection">
+                  <h3 style="color: #000;">Brand Loyalty:</h3>
+                  <p style="color: #000;"> Memorable design builds brand loyalty, turning one-time customers into lifelong advocates.</p>
+                  <!-- <a href="#get-started" class="cta-button">Get Started</a> -->
+                </section>
+              </div>
+            </div>
+      </div>
+      <section class="ts-services solid-bg" id="ts-services">
+        <div class="container">
+           <div class="row text-center">
+              <div class="col-md-12">
+                 <h2 class="section-title"><span style="color: #58BDB3;">Graphic Designing Services</span>Elevating Your Brand To The Heights Of Success</h2>
+              </div>
+           </div>
+           <!-- Title row end-->
+           <div class="row ts-service-row-box">
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/logo_design-.webp" width="auto" height="auto" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;"> Logo Design</h4>
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p> 
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/b_identity-removebg-preview.webp" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;">Brand Identity</h4>
+                     
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/p_design-.webp" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;">Print Design</h4>
+                      
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+           </div>
+           <!-- Content row end-->
+           <div class="gap-60"></div>
+           <div class="row ts-service-row-box">
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/s_graphic__1_-removebg-preview.webp" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;">Social Media Graphics</h4>
+                         <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/t_design.webp" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;">Tshirt Design</h4>
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/b_design.webp" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;">Poster & Banner Design </h4>
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                    </div>
+
+                    
+                    
+                 </div>
+                 <!-- Service1 end-->
+                 
+              </div>
+              <!-- Col end-->
+           </div>
+           <!-- Content row end-->
+        </div>
+        <!-- Container end-->
+     </section>
+     <!-- Service end-->
+     <br>
+<div class="faq-container container"> <br>
+   <div class="row text-center">
+      <div class="col-md-12">
+         <h2 class="section-title"><span style="color: #58BDB3;"></span>FAQ</h2>
+      </div>
+   </div>
+   <div class="faq-item">
+       <div class="faq-question">Q1.  What graphic design services do you offer?</div>
+       <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+   </div>
+   <div class="faq-answer">
+       <p>Rising Digitally specializes in a comprehensive range of graphic design services, including branding, website design, 3D rendering, motion graphics, AR experiences, and more. We aim to cover all your visual communication needs, from initial concept to final delivery.
+      </p>
+   </div>
+   <div class="faq-item">
+       <div class="faq-question">Q2. How does the design process work with Rising Digitally?</div>
+       <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+   </div>
+   <div class="faq-answer">
+       <p>Our process begins with understanding your vision and objectives. We then move into conceptualization, creating drafts for your review. We collaborate closely with you, incorporating feedback and refining the concept perfectly. Finally, we deliver high-quality design assets tailored to your specifications.</p>
+   </div>
+   <div class="faq-item">
+       <div class="faq-question">Q3. Can I see examples of work you've done before?</div>
+       <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+   </div>
+   <div class="faq-answer">
+       <p>Absolutely! We’re proud of our work and have a diverse portfolio showcasing our projects across various industries. You can view our work on our website or request a specific sample that aligns with your project needs.     </p>
+   </div>
+   <div class="faq-item">
+      <div class="faq-question">Q4. How long does it typically take to complete a design project?</div>
+      <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+  </div>
+  <div class="faq-answer">
+      <p>The timeline for a design project varies depending on the complexity and scope. A typical project can take anywhere from a few days to several weeks. We strive to work efficiently while ensuring the highest quality, and we’ll provide a more specific timeframe upon understanding your project details.
+
+     </p>
+  </div>
+  <div class="faq-item">
+   <div class="faq-question">Q5. What if I need more than the initial design concepts?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p>Your satisfaction is our priority. If the initial concepts don’t meet your expectations, we’re committed to a collaborative process that includes revisions based on your feedback to ensure the final design resonates with your brand and vision.
+  </p>
+</div>
+<div class="faq-item">
+   <div class="faq-question">Q6. How do you price your graphic design services?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p> Our pricing is project-based and varies depending on the scope and complexity of the work required. We provide transparent quotes and flexible packages to fit different budgets and needs. Contact us for a customized estimate.
+
+  </p>
+</div>
+<div class="faq-item">
+   <div class="faq-question">Q7.  How do I get started with Rising Digitally for my design needs?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p>Starting with us is simple. Reach out via our website or email, and we’ll schedule a consultation to discuss your project. This initial conversation is the first step toward creating your brand’s visual story.
+  </p>
+</div>
+<div class="faq-item">
+   <div class="faq-question">Q8. What information must I provide to begin a design project?</div>
+   <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+</div>
+<div class="faq-answer">
+   <p> To begin, we'll need a clear understanding of your project requirements, target audience, and desired outcomes. Any existing brand materials, like logos and style guides, as well as your preferences and inspirations, will help us craft the perfect design for you.
+
+  </p>
+</div>
+</div>
+<br>
+       <!-- Footer start-->
+       <footer class="footer" id="footer">
+         <div class="footer-main bg-overlay">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4 col-md-12 footer-widget footer-about">
+                     <div class="footer-logo">
+                        <img src="images/rd_logo.png" alt="">
+                     </div>
+                     <p>Rising Digitally is a UK-based influencer marketing agency that specializes in harnessing the power of online platforms to connect brands with their target audiences. <br><span style="font-family: 'Courier New', Courier, monospace; font-size: 18px;">This is where we Excel...</span></p>
+                     
+                     <!-- <h3 class="widget-title">Subscribe Newsletter!</h3> -->
+                     <!-- <form class="newsletter-form" id="newsletter-form" action="#" method="post">
+                        <div class="form-group">
+                           <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email" placeholder="Email "
+                              autocomplete="off">
+                           <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                     </form> -->
+                  </div>
+                  <!-- About us end-->
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Quick Links</h3>
+                     <ul class="list-dash">
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                      <li><a href="casestudies.html">CaseStudies</a></li>
+                      <li><a href="facebookads.html">Facebook Ads</a></li>
+                      <li><a href="https://calendly.com/risingdigitally"> Free Consultation</a></li>
+                      <li><a href="websitedevelopment.html">Website Development</a></li>
+                      <li><a href="socialmediamanagement.html">SMM</a></li>
+                      <li><a href="graphicdesigning.html">Graphic Designing</a></li>
+                      <li><a href="videoediting.html">Video Editing</a></li>
+                     <li><a href="letstalk.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Company Locations</h3>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-map-marker2"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Address</h3>
+                           <p>128 City Road, London, UK</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     
+                     <div class="ts-contact-info last"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-envelope"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Email Address</h3>
+                           <p>info@risingdigitally.com</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-phone3"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Phone Number</h3>
+                           <p>+44 7456 44098</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                  </div>
+               </div>
+               <!-- Content row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Footer Main-->
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                     <div class="copyright-info"><span>Copyright © 2023 by Rising Digitally</span></div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="footer-social text-right">
+                     <ul>
+                        <li><a href="https://www.facebook.com/Risingdigitally"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/rising-digitally/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/rising_digitally/"><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- Row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Copyright end-->
+      </footer>
+      <!-- Footer end-->
+
+      <div class="back-to-top affix" id="back-to-top" data-spy="affix" data-offset-top="10">
+         <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i>
+            <!-- icon end-->
+         </button>
+         <!-- button end-->
+      </div>
+      <!-- End Back to Top-->
+
+      <!--
+      Javascript Files
+      ==================================================
+      -->
+      <script>
+         const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.nextElementSibling;
+  const icon = item.querySelector('i');
+
+  item.addEventListener('click', () => {
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        const otherAnswer = otherItem.nextElementSibling;
+        const otherIcon = otherItem.querySelector('i');
+
+        otherAnswer.classList.remove('active');
+        otherIcon.classList.remove('active');
+        otherAnswer.style.maxHeight = "0";
+      }
+    });
+
+    answer.classList.toggle('active');
+    icon.classList.toggle('active');
+    if (answer.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = "0";
+    }
+  });
+});
+      </script>
+      <!-- initialize jQuery Library-->
+      <script type="text/javascript" src="js/jquery.js"></script>
+       
+       
+      <!-- Bootstrap jQuery-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Owl Carousel-->
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <!-- Counter-->
+      <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+      <!-- Waypoints-->
+      <script type="text/javascript" src="js/waypoints.min.js"></script>
+      <!-- Color box-->
+      <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+       
+        
+      <!-- Template custom-->
+      <script type="text/javascript" src="js/custom.js"></script>
+   </div>
+   <!--Body Inner end-->
+</body>
+
+</html>

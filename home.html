@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--
+    Basic Page Needs
+    ==================================================
+    -->
+   <meta charset="utf-8">
+   <title>  Rising Digitally </title>
+   <!--
+    Mobile Specific Metas
+    ==================================================
+    -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <!--
+    CSS
+    ==================================================
+    -->
+    <!--Fav Icon-->
+    <link rel="icon" type="image/x-icon" href="/images/icon/Fav-icon.png">
+
+   <!-- Bootstrap-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Animation-->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- Morris CSS -->
+   <link rel="stylesheet" href="css/morris.css">
+   <!-- FontAwesome-->
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <!-- Icon font-->
+   <link rel="stylesheet" href="css/icon-font.css">
+   <!-- Owl Carousel-->
+   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+   
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <!-- Owl Theme -->
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!-- Colorbox-->
+   <link rel="stylesheet" href="css/colorbox.css">
+   <!-- Template styles-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive styles-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
+   <!--if lt IE 9
+    script(src='js/html5shiv.js')
+    script(src='js/respond.min.js')
+
+    -->
+    <style>
+     
+      .block-padd {
+                padding: 50px 0
+            }
+            .block-padd {
+                    padding: 70px 0
+                }
+                .home-banner {
+                padding-top: 30px;
+            }
+            .home-banner h1 {
+                font-size: 2.1rem;
+                line-height: 1.4
+            }
+
+            .home-banner p {
+                font-size: 1.1rem;
+                line-height: 2rem
+            }
+
+            .jumbotron-slider img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%!important;
+                width: 100%!important
+            }
+
+            .jumbotron-slider {
+                margin-top: 0;
+                position: relative;
+                height: 0;
+                padding-bottom: 100%
+            }
+
+            @media only screen and (min-width: 380px) {
+                .home-banner h1 {
+                    font-size:2.5rem;
+                    line-height: 1.3
+                }
+
+                .home-banner p {
+                    font-size: 1.2rem;
+                    line-height: 2.3rem
+                }
+            }
+            .home-banner.has-banner-video h1 {
+                    margin-top: -30px
+                }
+
+                @media only screen and (min-width: 1300px) {
+                .home-banner.has-banner-video .container {
+                    max-width:100%;
+                    padding: 0
+                }
+
+                .home-banner.has-banner-video .row {
+                    margin: 0
+                }
+
+                .home-banner.has-banner-video .column {
+                    padding: 0 50px 0 100px
+                }
+
+                .home-banner.has-banner-video .column + .column {
+                    padding: 0
+                }
+               }
+
+               .new-clients-block p {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 40px;
+                margin-top: 0
+            }
+
+            .new-clients-block .container {
+                    max-width: 100%
+                }
+
+                :root {
+                --branding-red: #de0d40;
+                --branding-purple: #504ed8;
+                --dark-heading: #091238;
+                --marquee-width: 100vw;
+                --marquee-height: 16vh;
+                --marquee-elements-displayed: 2.5;
+                --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+                --marquee-animation-duration: calc(var(--marquee-elements) * 4s);
+                --marquee-elements: 7
+            }
+            
+            .marquee,.left-right-marquee {
+                color: #000;
+                overflow: hidden;
+                margin-bottom: 50px;
+                position: relative
+            }
+
+            .marquee-content {
+                list-style: none;
+                height: 100%;
+                display: flex;
+                animation: scrolling var(--marquee-animation-duration) linear infinite
+            }
+
+            .left-right-marquee .marquee-content {
+                animation: custom-scrolling var(--marquee-animation-duration) linear infinite
+            }
+
+            @keyframes scrolling {
+                0% {
+                    transform: translateX(0)
+                }
+
+                100% {
+                    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)))
+                }
+            }
+
+            @keyframes custom-scrolling {
+                0% {
+                    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)))
+                }
+
+                100% {
+                    transform: translateX(0)
+                }
+            }
+
+            .marquee-content li {
+                align-items: center;
+                flex-shrink: 0;
+                width: var(--marquee-element-width);
+                max-height: 100%;
+                font-size: calc(var(--marquee-height)*3/4);
+                white-space: nowrap;
+                justify-content: center;
+                display: flex
+            }
+
+            .marquee-content li img {
+                height: 85px
+            }
+
+            .left-right-marquee:after,.left-right-marquee:before,.marquee:after,.marquee:before {
+                position: absolute;
+                top: 0;
+                width: 5rem;
+                height: 100%;
+                content: "";
+                z-index: 1
+            }
+
+            .left-right-marquee:before,.marquee:before {
+                left: 0;
+                background: linear-gradient(to right,#101112 0,transparent 100%)
+            }
+
+            .left-right-marquee:after,.marquee:after {
+                right: 0;
+                background: linear-gradient(to left,#1b1c1e 0,transparent 100%)
+            }
+            @media only screen and (min-width: 576px) {
+                :root {
+                    --marquee-width:100vw;
+                    --marquee-height: 16vh;
+                    --marquee-elements-displayed: 3.5
+                }}
+                @media only screen and (min-width: 768px) {
+                :root {
+                    --marquee-elements-displayed:4.5
+                }}
+
+                .left-right-marquee:after,.left-right-marquee:before,.marquee:after,.marquee:before {
+                    width: 20rem
+                }
+                @media only screen and (min-width: 992px) {
+                :root {
+                    --marquee-width:90vw;
+                    --marquee-height: 20vh;
+                    --marquee-elements-displayed: 5
+                }}
+
+                @media only screen and (min-width: 1200px) {
+                .left-right-marquee:after,.left-right-marquee:before,.marquee:after,.marquee:before {
+                    width:30rem
+                }}
+    </style>
+</head>
+
+<body>
+   <hr class="hr-3">
+   <div class="body-inner">
+
+      <div class="site-top-2"> 
+         <header class="header nav-down" id="header-2"> 
+            <!-- <div class="container">
+               <div class="row"> -->
+                  <!-- <div class="logo-area clearfix">
+                     <div class="logo col-lg-3 col-md-12">
+                        <a href="index.html">
+                           <img src="images/rd_logo.png" alt="">
+                        </a>
+                     </div>
+                     <!- logo end-->
+                     <!-- <div class="col-lg-9 col-md-12 pull-right">
+                        <ul class="top-info unstyled">
+                           <!- <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">24/7 Response Time</p>
+                                 <p class="info-subtitle">(+44) 7456 44098</p>
+                              </div>
+                           </li> -->
+                           <!-- <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">Send Your Query</p>
+                                 <p class="info-subtitle">info@risingdigitally.com</p>
+                              </div>
+                           </li> -->
+                          
+                        <!-- </ul>
+                     </div>  -->
+                     <!-- Col End-->
+                  <!-- </div>  -->
+                 
+                  <!-- Logo Area End-->
+               <!-- </div> 
+            </div> -->
+             <!-- <hr> -->
+           
+            <!-- Container end-->
+            <div class="site-nav-inner site-navigation navigation navdown">
+               <div class="container">
+                  <nav class="navbar navbar-expand-lg ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span></button>
+                     <!-- End of Navbar toggler-->
+
+                     <a href="index.html">
+                        <img src="images/rd_logo.png" alt="">
+                     </a>
+
+                    
+                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                           <li class="nav-item dropdown active"><a class="nav-link" href="index.html">Home</a>
+                             
+                          
+                              
+                  
+                           <!-- li end-->
+                           <li class="nav-item dropdown">
+                                 <a href="about.html">About Us</a>
+                           </li>
+
+                               <li class="nav-item dropdown">
+                              <a class="nav-link" href="" data-toggle="dropdown">
+                       Services
+                         <i class="fa fa-angle-down"></i>
+                       </a>
+                              <ul class="dropdown-menu" role="menu">
+                                 <li><a href="service.html">All Services</a></li>
+                                 <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                                 <li><a href="socialmediamanagement.html">Social Media Management</a></li>
+                                 <li><a href="graphicdesigning.html">Graphic Designining</a></li>
+                                 <li><a href="videoediting.html">Video Editing</a></li>
+                                 <li><a href="facebookads.html">Facebook Ads</a></li>
+                                 <li><a href="websitedevelopment.html">Website Development</a></li>
+                              </ul>
+                           </li>
+                           <!-- li end-->
+
+                   
+
+                         <!-- li end-->
+                         <li class="nav-item dropdown">
+                           <a href="casestudies.html">CaseStudies</a>
+
+                           
+                         </li>
+
+                         <li class="nav-item dropdown">
+                           <a href="letstalk.html">Lets Talk</a> 
+                         </li>
+
+                        
+                        </ul>
+                        <!--Nav ul end-->
+                     </div>
+                     <!-- <a href="contact.html" class="top-right-btn btn btn-primary">Let's Talk</a> -->
+                     <!-- Top bar btn -->
+                  </nav>
+                  <!-- Collapse end-->
+
+                  
+                  
+               </div>
+            </div>
+            <!-- Site nav inner end-->
+         </header>
+         <!-- Header end-->
+      </div>
+
+      <br><br>
+      <section class="block-padd home-banner has-banner-video">
+         <div class="container text-left">
+            <div class="row" >
+              <div class="col-lg-6" style="padding-left: 50px;">
+             
+                  <h1 style="margin-top: 100px;">Best Influencer Marketing Agency in US</h1>
+                  <p style="font-size: 20px;">
+                      Rising Digitally is the <strong>best Influencer marketing agency in India</strong>
+                      which provides the <strong>top influencer marketing platform</strong>
+                      to help brands / visionary marketers leverage social media influencers’ content in marketing the product/service. Our <strong>influencer marketing experts</strong>
+                      unite brands with top content creators, social media influencers, artists, celebrities, vloggers and bloggers with interested viewers (brand’s potential customers) for executing award winning influencer marketing campaigns. 
+                  </p>
+                  <div class="banner-cta">
+                     <p><a class="slider btn btn-primary" href="letstalk.html"> I Want To Grow</a><a class="slider btn btn-border" href="service.html">View Services</a></p>
+                  </div>
+           
+              </div>
+            
+              <div class="col-lg-6">
+               <div class="jumbotron-slider">
+                  <div class="video-wraper">
+                      <video id="banner-video" playsinline="true" autoplay muted loop preload="auto" poster="https://www.grynow.in/assets/home-page/banner-video.webp">
+                          <source src="https://www.grynow.in/assets/home-page/banner-video.mp4" type="video/mp4">
+                          <source src="https://www.grynow.in/assets/home-page/banner-video.mov" type="video/mov">Your browser does not support the video tag.
+          
+                      </video>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+   
+
+      </section>
+      
+
+      <section class="new-clients-block">
+         <div class="container">
+             <div class="row">
+                 <div class="column">
+                     <!-- start swiper -->
+                     <div class="marquee">
+                         <ul class="marquee-content">
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                           
+                         </ul>
+                     </div>
+                     <div class="left-right-marquee">
+                         <ul class="marquee-content">
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                             <li>
+                                 <img src="images/clients/corinne-clox.png" alt="">
+                             </li>
+                         </ul>
+                     </div>
+                     <!-- end swiper -->
+                 </div>
+             </div>
+         </div>
+     </section>
+
+      
+      <div class="carousel slide" id="main-slide" data-ride="carousel">
+         <!-- Indicators-->
+         <ol class="carousel-indicators visible-lg visible-md">
+            <li class="active" data-target="#main-slide" data-slide-to="0"></li>
+            <li data-target="#main-slide" data-slide-to="1"></li>
+            <li data-target="#main-slide" data-slide-to="2"></li>
+         </ol>
+         <!-- Indicators end-->
+         <!-- Carousel inner-->
+         <!-- <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image:url(images/slider/2-45.png);">
+               <div class="container">
+                  <div class="slider-content text-left">
+                     <div class="col-md-12">
+                        <h2 class="slide-title title-light">You have needs</h2>
+                        <h3 class="slide-sub-title">We Have the Solutions</h3>
+                        <p class="slider-description lead">We SAVE YOU TIME, YOU SAVE MONEY </p>
+                        <p><a class="slider btn btn-primary" href="letstalk.html"> I Want To Grow</a><a class="slider btn btn-border" href="service.html">View Services</a></p>
+                     </div> -->
+                     <!-- Col end-->
+                  <!-- </div> -->
+                  <!-- Slider content end-->
+               <!-- </div> -->
+               <!-- Container end-->
+            <!-- </div> -->
+            <!-- Carousel item 1 end-->
+            <!-- <div class="carousel-item" style="background-image:url(images/slider/3-39.png);">
+               <div class="container">
+                  <div class="slider-content text-center">
+                     <div class="col-md-12">
+                        <h2 class="slide-title title-light">Execute Strategize Manage </h2>
+                        <h3 class="slide-sub-title">WE DO IT ALL FOR YOU</h3>
+                        <p class="slider-description lead">WE CRAFT INFLUENCER MARKETING THAT CONVERTS</p>
+                        <p><a class="slider btn btn-primary" href="service.html">Our Services</a></p>
+                     </div> -->
+                     <!-- Col end-->
+                  <!-- </div> -->
+                  <!-- Slider content end-->
+               <!-- </div> -->
+               <!-- Container end-->
+            <!-- </div> -->
+            <!-- Carousel item 2 end-->
+            <!-- <div class="carousel-item" style="background-image:url(images/slider/1-43.png);" >
+               
+               <div class="container">
+                  <div class="slider-content text-right">
+                     <div class="col-md-12">
+                        <h2 class="slide-title title-light">3+ years of experience</h2>
+                        <h3 class="slide-sub-title">Strong Network</h3>
+                        <p><a class="slider btn btn-primary" href="service.html">View Services</a></p>
+                     </div> -->
+                     <!-- Col end-->
+                  <!-- </div> -->
+                  <!-- Slider content end-->
+               <!-- </div> -->
+               <!-- Container end-->
+            <!-- </div> -->
+            <!-- Carousel item 3 end-->
+         <!-- </div> -->
+         <!-- Carousel inner end-->
+         <!-- Controllers-->
+         <!-- <a class="left carousel-control carousel-control-prev" href="#main-slide" data-slide="prev"><span><i class="fa fa-angle-left"></i></span></a>
+         <a class="right carousel-control carousel-control-next" href="#main-slide" data-slide="next"><span><i class="fa fa-angle-right"></i></span></a>
+      </div> -->
+      <!-- Carousel end-->
+      
+      <!-- <section id="ts-features-light" class="ts-features-light">
+         <div class="container" style="background-color: black;">
+            <div class="row feature-light-row">
+               <div class="col-md-4 text-center">
+                  <div class="ts-feature-box">
+                     <div class="ts-feature-info">
+                        <div class="feature-img">
+                           <img src="images/icon/why-1.png" alt="" />
+                        </div>
+                        <h3 class="ts-feature-title">Influential Campaigns</h3>
+                        <p>Discover our reliable influencer marketing services that drive results.</p>
+                        <a class="slider btn btn-primary" href="letstalk.html">Let's Talk</a>
+                     </div>
+                  </div> -->
+                  <!-- feature box-1 end-->
+               <!-- </div> -->
+               <!-- col-1 end-->
+               <!-- <div class="col-md-4 text-center border-left">
+                  <div class="ts-feature-box">
+                     <div class="ts-feature-info">
+                        <div class="feature-img">
+                           <img src="images/icon/service-2.png" alt="" />
+                        </div>
+                        <h3 class="ts-feature-title">Global Reach</h3>
+                        <p>Expand your brand's influence worldwide with our global influencer network.</p>
+                        <a class="slider btn btn-primary" href="letstalk.html">Let's Talk</a>
+                     </div>
+                  </div> -->
+                  <!-- feature box-2 end-->
+               <!-- </div> -->
+               <!-- col-2 end-->
+               <!-- <div class="col-md-4 text-center border-left">
+                  <div class="ts-feature-box">
+                     <div class="ts-feature-info">
+                        <div class="feature-img">
+                           <img src="images/icon/service-3.png" alt="" />
+                        </div> -->
+                        <!--<i class="icon icon-clock3"></i>-->
+                        <!-- <h3 class="ts-feature-title">Savings & Impact</h3>
+                        <p>Experience cost-effective influencer strategies that maximize your ROI.</p>
+                        <a class="slider btn btn-primary" href="letstalk.html">Let's Talk</a>
+                     </div>
+                  </div> -->
+                  <!-- feature box-2 end-->
+               <!-- </div> -->
+               <!-- col-3 end-->
+            <!-- </div>
+         </div>
+      </section> -->
+      <!-- ts-feature light end -->
+
+      <section  class="ts-service-area service-area-pattern" id="ts-service-area" >
+        <div class="service-area-bg">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-md-12">
+                  <h2 class="section-title"><span style="color: #58BDB3;">About Us</span>Why Rising Digitally?</h2>
+               </div>
+            </div>
+            <!-- Title row end-->
+            <div class="row">
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-wrapper">
+                    <div class="ts-service-box">
+                     <div class="ts-service-box-img">
+                        <img src="images/icon/why-1.png" alt="" />
+                     </div>
+                     <div class="ts-service-box-info">
+                        <h3 class="service-box-title">Data-Driven Growth</h3>
+                        <p> Experience explosive business growth by leveraging data-driven influencer marketing strategies
+                        </p>
+                    </div>
+                  </div><!-- Service 1 end -->
+                  <div class="gap-15"></div>
+                  <div class="ts-service-box">
+                     <div class="ts-service-box-img">
+                        <img src="images/icon/why-2.png " alt="" />
+                     </div>
+                     <div class="ts-service-box-info">
+                        <h3 class="service-box-title">Influencer Trust & Security</h3>
+                        <p>Build trust and ensure the security of your influencer partnerships with our proven methods </p>
+                    </div>
+                  </div><!-- Service 2 end -->
+                  <div class="gap-15"></div>
+                  <div class="ts-service-box">
+                     <div class="ts-service-box-img">
+                        <img src="images/icon/why-4.png " alt="" />
+                     </div>
+                     <div class="ts-service-box-info">
+                        <h3 class="service-box-title">Global Influencer Network </h3>
+                        <p>Tap into a global network of influencers, reaching audiences worldwide</p>
+                    </div>
+                  </div><!-- Service 3 end -->
+                  </div>
+               </div><!-- Col end -->
+               <div class="col-lg-4 col-md-12">
+                  <span class="service-img"><img class="img-fluid" src="images/services/service.png" alt="" /></span>
+               </div>
+
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-wrapper ml-lg-auto">
+                    <div class="ts-service-box">
+                     <div class="ts-service-box-img ">
+                        <img src="images/icon/collab.png" alt="" />
+                     </div>
+                     <div class="ts-service-box-info">
+                        <h3 class="service-box-title">Influencer Campaigns</h3>
+                        <p>Scale your influencer campaigns effortlessly with our adaptable solutions</p>
+                    </div>
+                  </div><!-- Service 4 end -->
+                  <div class="gap-15"></div>
+                  <div class="ts-service-box">
+                     <div class="ts-service-box-img">
+                        <img src="images/icon/manage-.png" alt="" />
+                     </div>
+                     <div class="ts-service-box-info">
+                        <h3 class="service-box-title">Efficient Collaborations</h3>
+                        <p> Optimize influencer collaborations for efficient and effective content delivery</p>
+                    </div>
+                  </div><!-- Service 5 end -->
+                  <div class="gap-15"></div>
+                  <div class="ts-service-box">
+                     <div class="ts-service-box-img">
+                        <img src="images/icon/management__1.png" alt="" />
+                     </div>
+                     <div class="ts-service-box-info">
+                        <h3 class="service-box-title">Expert Influencer Management</h3>
+                        <p>Trust our expert team to manage your influencer campaigns, ensuring maximum impact </p>
+                    </div>
+                  </div><!-- Service 6 end -->
+                  </div>
+               </div><!-- Col end -->
+            </div><!-- Content row end -->
+            <!-- Content row end-->
+         </div>
+         <!-- Container end-->
+        </div>
+      </section>
+      <!-- Service Section end-->
+      
+<!-- demo section start -->
+<section id="call-to-action" class="call-to-action-bg ">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-10 align-self-center">
+            <h3 class="call-to-action-title">Connecting your brand with the right Influencers at the right time</h3>
+            <!-- <p>
+               Connecting your brand with the right Influencers at the right time
+            </p> -->
+         </div>
+         <div class="col-lg-2 text-right">
+            <a class="btn btn-box link-more" href="letstalk.html">Get Started Today<i class="icon icon-right-arrow2"></i></a>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- Call to action end -->
+<!-- demo section end -->
+
+      <section class="ts-services solid-bg" id="ts-services">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-md-12">
+                  <h2 class="section-title"><span style="color: #58BDB3;">What We Do</span>Elevating Your Brand To The Heights Of Success</h2>
+               </div>
+            </div>
+            <!-- Title row end-->
+            <div class="row ts-service-row-box">
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/smim.jpg" width="auto" height="auto" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;"> Social Media Influencer Marketing</h4>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p> 
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/yim.jpg" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">YouTube Influencer Marketing</h4>
+                      
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/ugc.jpg" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">UGC Video Production</h4>
+                       
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Content row end-->
+            <div class="gap-60"></div>
+            <div class="row ts-service-row-box">
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/mm (1).jpg" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">Meme Marketing</h4>
+                          <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/rim.jpg" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">Regional Influencer Marketing</h4>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+                  </div>
+                  <!-- Service1 end-->
+               </div>
+               <!-- Col end-->
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-service-box">
+                     <div class="ts-service-image-wrapper">
+                        <img class="img-fluid" src="images/services/mim.jpg" alt="">
+                     </div>
+                     <div class="ts-service-content">
+                        <h4 class="service-title" style="color: #ffff;">Micro-Influencer Marketing </h4>
+                        <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                     </div>
+
+                     
+                     
+                  </div>
+                  <!-- Service1 end-->
+                  
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Content row end-->
+         </div>
+         <!-- Container end-->
+         <div class="text-center" >
+            <a class="slider btn btn-primary" href="service.html">See All Services</a>
+         </div>
+      </section>
+      <!-- Service end-->
+   
+
+      <video width="400" controls>
+         <source src="/images/video/rising_video.mp4" type="video/mp4">
+         <source src="mov_bbb.ogg" type="video/ogg">
+      
+       </video>
+       
+      <!-- video section -->
+  
+      <br> <br>
+
+      <div class="row text-center">
+         <div class="col-md-12">
+            <h2 class="section-title">Brands We Have Worked With</h2>
+         </div>
+      </div>
+
+      <section class="clients-area " id="clients-area">
+         <div class="container">
+
+
+            <div class="row">
+               <div class="col-sm-12 owl-carousel owl-theme text-center partners" id="partners-carousel">
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/8-15-1.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/16-8.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/19-5.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/10-10.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/4-33.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/21-2-1.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/25-3-1.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/26-3-1.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/27-3-1.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/23-5.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/28-3.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/29-2.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/30-2.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/20-2.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/24-1-1.png" alt="">
+                     </a>
+                  </figure>
+                 
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/27-3.png" alt="">
+                     </a>
+                  </figure>
+                 
+               
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/1-41.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/2-53.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/19-2.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/4-27.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/5-25-2.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/6-28.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/7-16-1.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/8-22.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/26-3.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/10-8.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/11-8.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/12-10.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/13-7.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/14-7.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/15-7.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/16-5.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/17-5.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/18-3.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/3-36.png" alt="">
+                     </a>
+                  </figure>
+                  <figure class="item partner-logo last">
+                     <a href="#">
+                        <img class="img-fluid" src="images/clients/20-2.png" alt="">
+                     </a>
+                  </figure>
+                 
+                 
+                 
+               </div>
+               <!-- Owl carousel end-->
+            </div>
+            <!-- Content row end-->
+         </div>
+         <!-- Container end-->
+      </section>
+      <!-- Partners end-->
+
+
+      <section class="testimonial-area" id="testimonial-area">
+         <div class="container">
+            <div class="row">
+               
+               <!-- Col end-->
+               <div class="col-lg-12 testimonial-client">
+                  <div class="row text-center">
+                     <div class="col-md-12">
+                        <h2 class="section-title"><span style="color: #58BDB3;">Client's Testmonial</span>Words Of Our clients</h2>
+                     </div>
+                  </div>
+                  <div class="owl-carousel owl-theme testimonial-slide owl-dark" id="testimonial-slide">
+                     <div class="item">
+                        <div class="quote-item quote-square"><span class="quote-text">	"Rising Digitally helped me to increase brand awareness. I would definitely recommend them to anyone looking for  influencer marketing ."</span>
+                           <div class="quote-item-footer">
+                              <img class="testimonial-thumb" src="images/clients/amanda.png" alt="testimonial">
+                              <div class="quote-item-info">
+                                <span class="quote-subtext">Amanda Lee</span>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Quote item end-->
+                     </div>
+                     <!-- Item 1 end-->
+                     <div class="item">
+                        <div class="quote-item quote-square"><span class="quote-text">“Fantastic service, and very patient with our needs. Guided me a lot about Influencer marketing. Delivery was quick and they had good communication, I highly recommend Rising Digitally services to everyone and I will be working with them again soon. Thank you.”</span>
+                           <div class="quote-item-footer">
+                              <img class="testimonial-thumb" src="images/clients/adam.png" alt="testimonial">
+                              <div class="quote-item-info">
+                                <span class="quote-subtext">Adam Cheise</span>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Quote item end-->
+                     </div>
+                     <!-- Item 2 end-->
+                     <div class="item">
+                        <div class="quote-item quote-square"><span class="quote-text">Amazing service and even more impressive behaviour. I liked their management system and how they treat their. Really impressed with Rising Digitally.</span>
+                           <div class="quote-item-footer">
+                              <img class="testimonial-thumb" src="images/clients/krista.png" alt="testimonial">
+                              <div class="quote-item-info">
+                                 <span class="quote-subtext">Krista</span>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Quote item end-->
+                     </div>
+                     <!-- Item 3 end-->
+                  </div>
+                  <!-- Testimonial carousel end-->
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Content row end-->
+         </div>
+         <!-- Container end-->
+      </section>
+      <!-- Client Testimonial end-->
+      
+      <br>
+      <section id="call-to-action" class="call-to-action-bg ">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-10 align-self-center">
+                  <h3 class="call-to-action-title">Need deeper understanding? Book a Free Demo</h3>
+                  <!-- <p>
+                     Connecting your brand with the right Influencers at the right time
+                  </p> -->
+               </div>
+               <div class="col-lg-2 text-right">
+                  <a class="btn btn-box link-more" href="https://calendly.com/risingdigitally">Book a Demo<i class="icon icon-right-arrow2"></i></a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Call to action end -->
+
+      <section id="ts-facts-area" class="ts-facts-area-bg bg-overlay">
+         <div class="container">
+            <div class="row ">
+               <div class="col-lg-5 col-md-12 column-left-title">
+                  <h2 class="column-title">3+ Years Experience in Influencer Marketing</h2>
+               </div>
+               <div class="col-lg-7 col-md-12">
+                  <div class="container">
+                     <div class="row text-center">
+                        <div class="col-lg-6 col-md-6">
+                           <div class="ts-facts-bg">
+                              <img src="images/icon/brand-we-have-worked-with.png" alt="" />
+                              <div class="ts-facts-content">
+                                 <h4 class="ts-facts-num"><span class="counterUp">50 </span>+</h4>
+                                 <p class="facts-desc">Brands We Have Worked With</p>
+                              </div>
+                           </div>
+                           <!-- Facts 1 end-->
+                        </div>
+                        <!-- Col 1 end-->
+                        <div class="col-lg-6 col-md-6">
+                           <div class="ts-facts-bg">
+                              <img src="images/icon/influencer-collaboration-.png" alt="" />
+                              <div class="ts-facts-content">
+                                 <h4 class="ts-facts-num"><span class="counterUp">100</span>+</h4>
+                                 <p class="facts-desc">Influencers We Collaborated With</p>
+                              </div>
+                           </div>
+                           <!-- Facts 2 end-->
+                        </div>
+                        <!-- Col 2 end-->
+                       
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Row end-->
+         </div>
+         <!-- Container 2 end-->
+      </section>
+      <!-- Facts Area End -->
+      
+      
+      <!-- contact trying -->
+      <section class="quote-area solid-bg" id="quote-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 text-center">
+                  <h2 class="section-title"><span style="color: #58BDB3;"></span>Contact Us</h2> 
+               </div> 
+               <div class="col-lg-5">
+                  <div class="quote_form"> <br> 
+                     <p class="contact-content">Feel free to reach out to us anytime! Whether you have questions, feedback, or just want to connect, <br> our team is here to assist you. Contact us today, and let's start a conversation. Your input matters to us, and we look forward to hearing from you.</p>
+                     <br>
+                     <div class="contact-info">
+                        <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #58BDB3;" class="icon icon-map-marker2"></i></span>
+                           <div class="ts-contact-content">
+                              <h3 class="ts-contact-title">Find Us</h3>
+                              <p>128 City Road, London, UK</p>
+                           </div>
+                           <!-- Contact content end-->
+                        </div>
+                        <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #58BDB3;" class="icon icon-phone3"></i></span>
+                           <div class="ts-contact-content">
+                              <h3 class="ts-contact-title">Contact Us</h3>
+                              <p>+44 7456 44098</p>
+                           </div>
+                           <!-- Contact content end-->
+                        </div>
+                        <div class="ts-contact-info last"><span class="ts-contact-icon float-left"><i style="color: #58BDB3;" class="icon icon-envelope"></i></span>
+                           <div class="ts-contact-content">
+                              <h3 class="ts-contact-title">Email Us</h3>
+                              <p>info@risingdigitally.com</p>
+                           </div>
+                           <!-- Contact content end-->
+                        </div>
+                     </div>
+
+                     <!-- <div class="quote-img">
+
+                        <img class="img-fluid" src="images/alltransport.png" alt="img">
+                     </div> -->
+                  </div><br> <br> <br>
+                  <!-- Quote form end-->
+               </div> <br>
+               <!-- Col end-->
+               <div class="col-lg-6">
+                  
+                 <div class="contact-submit-box contact-box form-box">
+                    <form class="contact-form" id="contact-form" action="contact-form.php" method="POST">
+                       <div class="error-container"></div>
+                       <div class="row">
+                          <div class="col-lg-12">
+                             <div class="form-group">
+                                <input class="form-control form-name" id="name" name="name" placeholder="Full Name" type="text" required="">
+                             </div>
+                          </div>
+                          <!-- Col end-->
+                          <div class="col-lg-12">
+                             <div class="form-group">
+                                <input class="form-control form-website" id="url" name="url" placeholder="Representative" type="url" required="">
+                             </div>
+                          </div>
+                          <div class="col-lg-12">
+                             <div class="form-group">
+                                <input class="form-control form-email" id="email" name="email" placeholder="Email" type="email" required="">
+                             </div>
+                          </div>
+                          <div class="col-lg-12">
+                             <div class="form-group">
+                                <textarea class="form-control form-message required-field" id="message" placeholder="Message" rows="8"></textarea>
+                             </div>
+                          </div>
+                          <!-- Col 12 end-->
+                       </div>
+                       <!-- Form row end-->
+                          <button class="btn btn-primary tw-mt-30 " type="submit"><i class="fa fa-paper-plane-o"></i> Send Message</button>
+                    </form>
+                    <!-- Form end-->
+                 </div>
+              </div>
+              <!-- Contact form end -->
+            </div>
+            <!-- Content row end-->
+         </div>
+         <!-- Container end-->
+      </section>
+      <!-- Quote area end-->
+
+
+     
+      
+   
+
+      <!-- Footer start-->
+      <footer class="footer" id="footer">
+         <div class="footer-main bg-overlay">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4 col-md-12 footer-widget footer-about">
+                     <div class="footer-logo">
+                        <img src="images/rd_logo.png" alt="">
+                     </div>
+                     <p>Rising Digitally is a UK-based influencer marketing agency that specializes in harnessing the power of online platforms to connect brands with their target audiences. <br><span style="font-family: 'Courier New', Courier, monospace; font-size: 18px;">This is where we Excel...</span></p>
+                     
+                     <!-- <h3 class="widget-title">Subscribe Newsletter!</h3> -->
+                     <!-- <form class="newsletter-form" id="newsletter-form" action="#" method="post">
+                        <div class="form-group">
+                           <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email" placeholder="Email "
+                              autocomplete="off">
+                           <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                     </form> -->
+                  </div>
+                  <!-- About us end-->
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Quick Links</h3>
+                     <ul class="list-dash">
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                      <li><a href="casestudies.html">CaseStudies</a></li>
+                      <li><a href="facebookads.html">Facebook Ads</a></li>
+                      <li><a href="https://calendly.com/risingdigitally"> Free Consultation</a></li>
+                      <li><a href="websitedevelopment.html">Website Development</a></li>
+                      <li><a href="socialmediamanagement.html">SMM</a></li>
+                      <li><a href="graphicdesigning.html">Graphic Designing</a></li>
+                      <li><a href="videoediting.html">Video Editing</a></li>
+                     <li><a href="letstalk.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Company Locations</h3>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-map-marker2"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Address</h3>
+                           <p>128 City Road, London, UK</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     
+                     <div class="ts-contact-info last"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-envelope"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Email Address</h3>
+                           <p>info@risingdigitally.com</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-phone3"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Phone Number</h3>
+                           <p>+44 7456 44098</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                  </div>
+               </div>
+               <!-- Content row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Footer Main-->
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                     <div class="copyright-info"><span>Copyright © 2023 by Rising Digitally</span></div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="footer-social text-right">
+                     <ul>
+                        <li><a href="https://www.facebook.com/Risingdigitally"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/rising-digitally/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/rising_digitally/"><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- Row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Copyright end-->
+      </footer>
+      <!-- Footer end-->
+
+      <div class="back-to-top affix" id="back-to-top" data-spy="affix" data-offset-top="10">
+         <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i>
+            <!-- icon end-->
+         </button>
+         <!-- button end-->
+      </div>
+      <!-- End Back to Top-->
+
+      <!--
+      Javascript Files
+      ==================================================
+      -->
+      <!-- initialize jQuery Library-->
+      <script type="text/javascript" src="js/jquery.js"></script>
+       
+       
+      <!-- Bootstrap jQuery-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Owl Carousel-->
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <!-- Counter-->
+      <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+      <!-- Waypoints-->
+      <script type="text/javascript" src="js/waypoints.min.js"></script>
+      <!-- Color box-->
+      <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+       
+        
+      <!-- Template custom-->
+      <script type="text/javascript" src="js/custom.js"></script>
+   </div>
+   <!--Body Inner end-->
+</body>
+
+</html>

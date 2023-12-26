@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--
+    Basic Page Needs
+    ==================================================
+    -->
+   <meta charset="utf-8">
+   <title>  Rising Digitally | Facebook Ads</title>
+   <!--
+    Mobile Specific Metas
+    ==================================================
+    -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <!--
+    CSS
+    ==================================================
+    -->
+     <!--Fav Icon-->
+     <link rel="icon" type="image/x-icon" href="/images/icon/Fav-icon.png">
+   <!-- Bootstrap-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Animation-->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- Morris CSS -->
+   <link rel="stylesheet" href="css/morris.css">
+   <!-- FontAwesome-->
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <!-- Icon font-->
+   <link rel="stylesheet" href="css/icon-font.css">
+   <!-- Owl Carousel-->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <!-- Owl Theme -->
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!-- Colorbox-->
+   <link rel="stylesheet" href="css/colorbox.css">
+   <!-- Template styles-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive styles-->
+   <link rel="stylesheet" href="css/responsive.css">
+
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
+   <!--if lt IE 9
+    script(src='js/html5shiv.js')
+    script(src='js/respond.min.js')
+    -->
+    <style>
+      .faq-container {
+         width: 100%;
+         background-color: #000;
+         border-radius: 10px;
+         box-shadow: 0 0 10px #fff;
+       }
+       
+       .faq-item {
+         padding: 20px;
+         border-bottom: 1px solid #e0e0e0;
+         cursor: pointer;
+         transition: background-color 0.3s ease-in-out;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+       }
+       
+       .faq-item:last-child {
+         border-bottom: none;
+       }
+       
+       .faq-question {
+         font-size: 18px;
+         font-weight: 700;
+         padding-bottom: 3px;
+         color: #fff;
+       }
+       
+       .faq-answer {
+         font-size: 16px;
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.3s ease-in-out;
+         padding-left: 10px;
+         padding-right: 10px;
+         color: #fff;
+      
+       }
+       
+       .faq-answer.active {
+         border-bottom: 1px solid #fff;
+       }
+       
+       .icon-container i {
+         color: #000;
+         font-size: 16px;
+         cursor: pointer;
+         transition: transform 0.3s ease-in-out;
+       }
+       
+       .icon-container i.active {
+         transform: rotate(90deg);
+       }
+      header {
+         background-color: #58BDB3;
+         color: black;
+         padding: 1em 0;
+       }
+      
+       .mection {
+         max-width: 800px;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #58BDB3;
+         box-shadow: 10 10 10px rgba(153, 46, 46, 0.1);
+         border-radius: 20px;
+         border-bottom: 12px solid #EE4E27;
+         border-right: 12px solid #EE4E27;
+         
+      
+       }
+      
+      
+       .cta-button {
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: #ECAF42;
+         color: #000;
+         text-decoration: none;
+         border-radius: 15px;
+         font-weight: bold;
+       }
+    </style>
+</head>
+
+<body>
+
+   <div class="body-inner">
+
+      <div class="site-top-2"> 
+         <header class="header nav-down" id="header-2"> 
+            <!-- <div class="container">
+               <div class="row"> -->
+                  <!-- <div class="logo-area clearfix">
+                     <div class="logo col-lg-3 col-md-12">
+                        <a href="index.html">
+                           <img src="images/rd_logo.png" alt="">
+                        </a>
+                     </div>
+                     <!- logo end-->
+                     <!-- <div class="col-lg-9 col-md-12 pull-right">
+                        <ul class="top-info unstyled">
+                           <!- <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">24/7 Response Time</p>
+                                 <p class="info-subtitle">(+44) 7456 44098</p>
+                              </div>
+                           </li> -->
+                           <!-- <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">Send Your Query</p>
+                                 <p class="info-subtitle">info@risingdigitally.com</p>
+                              </div>
+                           </li> -->
+                          
+                        <!-- </ul>
+                     </div>  -->
+                     <!-- Col End-->
+                  <!-- </div>  -->
+                 
+                  <!-- Logo Area End-->
+               <!-- </div> 
+            </div> -->
+             <!-- <hr> -->
+           
+            <!-- Container end-->
+            <div class="site-nav-inner site-navigation navigation navdown">
+               <div class="container">
+                  <nav class="navbar navbar-expand-lg ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span></button>
+                     <!-- End of Navbar toggler-->
+
+                     <a href="index.html">
+                        <img src="images/rd_logo.png" alt="">
+                     </a>
+
+                    
+                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                           <li class="nav-item dropdown "><a class="nav-link" href="index.html">Home</a>
+                             
+                          
+                              
+                  
+                           <!-- li end-->
+                           <li class="nav-item dropdown ">
+                                 <a href="about.html">About Us</a>
+                           </li>
+
+                               <li class="nav-item dropdown active">
+                              <a class="nav-link " href="" data-toggle="dropdown">
+                       Services
+                         <i class="fa fa-angle-down"></i>
+                       </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="service.html">All Services</a></li>
+                                    <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                                    <li><a href="socialmediamanagement.html">Social Media Management</a></li>
+                                    <li><a href="graphicdesigning.html">Graphic Designining</a></li>
+                                    <li><a href="videoediting.html">Video Editing</a></li>
+                                    <li class="active"><a href="facebookads.html">Facebook Ads</a></li>
+                                    <li><a href="websitedevelopment.html">Website Development</a></li>
+                                </ul>
+                           </li>
+                           <!-- li end-->
+
+                   
+
+                         <!-- li end-->
+                         <li class="nav-item dropdown">
+                           <a href="casestudies.html">casestudies</a>
+
+                           
+                         </li>
+
+                         <li class="nav-item dropdown">
+                           <a href="letstalk.html">Lets Talk</a>
+
+                           
+                         </li>
+                         <li class="nav-item dropdown">
+                           <a href="./for-influencer.html">For Influencers</a>
+
+                         </li>
+                        </ul>
+                        <!--Nav ul end-->
+                     </div>
+                     <!-- <a href="contact.html" class="top-right-btn btn btn-primary">Let's Talk</a> -->
+                     <!-- Top bar btn -->
+                  </nav>
+                  <!-- Collapse end-->
+
+                  
+                  
+               </div>
+            </div>
+            <!-- Site nav inner end-->
+         </header>
+         <!-- Header end-->
+      </div>
+
+      <div class="banner-area" id="banner-area" style="background-image:url(images/banner/8-3.webp);">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col">
+                  <div class="banner-heading">
+                     <h1 class="banner-title">Meta Ads</h1>
+                   
+                  </div>
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Row end-->
+         </div>
+         <!-- Container end-->
+      </div>
+      <!-- Banner area end-->
+      <br><br>
+      <div class="container">
+         <!-- <h2 style="text-align: left; color:#58BDB3" >Make your brand shine with Facebook Ads that can turn likes into loyalty and shares into sales</h2> -->
+        <br> <h2>Your Personal Facebook Ads Team at Rising Digitally
+         </h2>
+         <h4 style="text-align: left; color:aliceblue" style="text-align: left;"> Bringing your biggest dreams to life in the digital world, that's what we do at Rising Digitally. Forget about bland and boring marketing; we're here to make Facebook Ads sparkle just for you. Think of us as your friendly neighborhood experts, rolling up our sleeves to help shoot your business up to the stars. Need a hand with Facebook Ads? You've just found your dream team.
+<br>
+         <center>
+         <img class="img-fluid" src="./images/services/fb-1.png" alt="">
+        </center>
+         <!-- <h1 style="text-align: center;">Make Every Click Count with Facebook Marketing</h1><br> -->
+         <h2 style="text-align: left;">Feel the Energy of 3 Billion Hearts and Minds</h2>
+
+      <h4 style="text-align: left; color:aliceblue" style="text-align: left;"> Your brand story will unfold across screens worldwide, where every like, share, and comment is a cheer for what you do. Facebook isn't just a social network; it's a vibrant city of potential fans waiting to welcome you home.
+
+      </h4>
+      <center>
+         <img class="img-fluid" src="./images/services/fb-2.png" alt="">
+        </center> <br>
+      <h2 style="text-align: left;">Join the Ranks of Beloved Brands</h2>
+
+      <h4 style="text-align: left; color:aliceblue" style="text-align: left;"> 
+         Don't just compete — conquer with charisma. We’re not about silent billboards on the side of the digital highway; we’re about crafting magnetic moments that draw crowds. Because when your brand resonates, it doesn't just sell; it sings.
+      </h4><br>
+
+      <!-- <a href="./letstalk.html" class="cta-button">Transform Your Image Today</a> -->
+      </div>
+      <br>
+      <h2 style="text-align: center;">Why is Facebook Marketing Necessary for Your Brand?</h2>
+      <h4 style="text-align: center; color:aliceblue" style="text-align: left;"> 
+         Discover why Facebook Marketing isn't just an option; it's a game-changer for businesses of all sizes.</h4>      <div class="container">
+         <div class="row">
+            <div class="col-lg-4">
+               <section class="mection">
+                  <h3 style="color: #000;">Reach the Unreachable</h3>
+                  <p style="color: #000;">Sink into a vast sea of potential customers and engage with an audience like never before.
+                  </p>
+                     <a href="./letstalk.html" class="cta-button">Reach Your Audience</a>
+                </section>
+              </div> 
+              <div class="col-lg-4">
+               <section class="mection">
+                  <h3 style="color: #000;">Targeting with Precision</h3>
+                  <p style="color: #000;">Facebook's laser-focused targeting options allow you to reach the right audience with surgical precision.</p>
+                  <a href="./letstalk.html" class="cta-button">Target with Precision</a>
+                </section>
+              </div>
+           
+             
+              <div class="col-lg-4">
+               <section class="mection">
+                  <h3 style="color: #000;">The Cost-Effective Edge</h3>
+                  <p style="color: #000;"> Learn how to make every dollar count and achieve a substantial return on investment with Facebook Marketing.</p>
+                  <a href="./letstalk.html" class="cta-button">Maximize ROI</a>
+                </section>
+              </div>
+              <div class="col-lg-4"> 
+               <section class="mection">
+                  <h3 style="color: #000;">Interaction that Matters:</h3>
+                  <p style="color: #000;">Experience the magic of building lasting relationships with customers through meaningful interactions.</p>
+                  <a href="./letstalk.html" class="cta-button">Engage with Customers</a>
+                </section>
+              </div>
+              <div class="col-lg-4">
+               <section class="mection">
+                  <h3 style="color: #000;">Staying Ahead of the Curve</h3>
+                  <p style="color: #000;"> Stay competitive and set yourself apart in the digital arena with Facebook Marketing.</p>
+                  <a href="#get-started" class="cta-button">Harness Data Insights</a>
+                </section>
+              </div>
+              <div class="col-lg-4">
+               <section class="mection">
+                  <h3 style="color: #000;">Data-Driven Mastery</h3>
+                  <p style="color: #000;">Master the art of data-driven decisions and unlock the full potential of your marketing campaigns.</p>
+                  <a href="./letstalk.html" class="cta-button">Stay Competitive</a>
+                </section>
+              </div>
+              
+            
+            </div>
+      </div>
+      <section class="ts-services solid-bg" id="ts-services">
+        <div class="container">
+           <div class="row text-center">
+              <div class="col-md-12">
+                 <h3 class="section-title"><span style="color: #58BDB3;">Meta Ads Services</span>Elevating Your Brand To The Heights Of Success</h3>
+              </div>
+           </div>
+           <!-- Title row end-->
+           <div class="row ts-service-row-box">
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/facebook_a-removebg-preview.webp" width="auto" height="auto" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;"> Ad Campaign Setup</h4>
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p> 
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/f_ads-removebg-preview.webp" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;">Ad Management and Optimization</h4>
+                     
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+              <div class="col-lg-4 col-md-12">
+                 <div class="ts-service-box">
+                    <div class="ts-service-image-wrapper">
+                       <img class="img-fluid" src="images/services/a_consult-removebg-preview.webp" alt="">
+                    </div>
+                    <div class="ts-service-content">
+                       <h4 class="service-title" style="color: #ffff;">Ad Campaign Consulting</h4>
+                      
+                       <p><a class="link-more" href="letstalk.html">Let's Talk<i class="icon icon-right-arrow2"></i></a></p>
+                    </div>
+                 </div>
+                 <!-- Service1 end-->
+              </div>
+              <!-- Col end-->
+           </div>
+           <!-- Content row end-->
+           
+           <!-- Content row end-->
+        </div>
+        <!-- Container end-->
+     </section>
+     <!-- Service end-->
+     <br>
+     <div class="faq-container container"> <br>
+        <div class="row text-center">
+           <div class="col-md-12">
+              <h2 class="section-title"><span style="color: #58BDB3;"></span>FAQ</h2>
+           </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q1.  How does Facebook advertising work?</div>
+            <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="faq-answer">
+            <p>Facebook advertising involves creating ad campaigns on the platform to promote your business. You can target specific demographics and interests, set a budget, and choose the ad format. Facebook displays your ads to users who match your criteria.
+            </p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q2. What budget should I allocate for Facebook advertising?
+            </div>
+            <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="faq-answer">
+            <p>The budget for Facebook advertising varies depending on your goals, industry, and audience size. We'll work with you to determine a budget that aligns with your objectives and helps you achieve the best results.</p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q3. How do you measure the success of Facebook ad campaigns?
+            </div>
+            <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="faq-answer">
+            <p>We use a combination of key performance indicators (KPIs) such as click-through rates (CTR), conversion rates, return on ad spend (ROAS), and more to measure the success of your Facebook ad campaigns. We provide regular reports to keep you informed of your campaign's performance.
+            </p>
+        </div>
+        <div class="faq-item">
+           <div class="faq-question">Q4. How long does it take to see results from Facebook advertising?</div>
+           <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+       </div>
+       <div class="faq-answer">
+           <p>The time it takes to see results can vary based on several factors, including your industry, audience, and campaign objectives. Typically, you can expect to see initial results within a few weeks, with continued improvement over time.
+          </p>
+       </div>
+       <div class="faq-item">
+        <div class="faq-question">Q5. Do I need a Facebook business page to advertise on the platform?
+      </div>
+        <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
+     </div>
+     <div class="faq-answer">
+        <p>Yes, you'll need a Facebook business page to create and run Facebook ad campaigns. If you don't have one, we can assist you in setting it up and optimizing it for your advertising needs.
+
+       </p>
+     </div>
+    
+
+     </div>
+     <br>
+       <!-- Footer start-->
+       <footer class="footer" id="footer">
+         <div class="footer-main bg-overlay">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4 col-md-12 footer-widget footer-about">
+                     <div class="footer-logo">
+                        <img src="images/rd_logo.png" alt="">
+                     </div>
+                     <p>Rising Digitally is a UK-based influencer marketing agency that specializes in harnessing the power of online platforms to connect brands with their target audiences. <br><span style="font-family: 'Courier New', Courier, monospace; font-size: 18px;">This is where we Excel...</span></p>
+                     
+                     <!-- <h3 class="widget-title">Subscribe Newsletter!</h3> -->
+                     <!-- <form class="newsletter-form" id="newsletter-form" action="#" method="post">
+                        <div class="form-group">
+                           <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email" placeholder="Email "
+                              autocomplete="off">
+                           <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                     </form> -->
+                  </div>
+                  <!-- About us end-->
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Quick Links</h3>
+                     <ul class="list-dash">
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+                      <li><a href="casestudies.html">CaseStudies</a></li>
+                      <li><a href="facebookads.html">Facebook Ads</a></li>
+                      <li><a href="https://calendly.com/risingdigitally"> Free Consultation</a></li>
+                      <li><a href="websitedevelopment.html">Website Development</a></li>
+                      <li><a href="socialmediamanagement.html">SMM</a></li>
+                      <li><a href="graphicdesigning.html">Graphic Designing</a></li>
+                      <li><a href="videoediting.html">Video Editing</a></li>
+                     <li><a href="letstalk.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Company Locations</h3>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-map-marker2"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Address</h3>
+                           <p>128 City Road, London, UK</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     
+                     <div class="ts-contact-info last"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-envelope"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Email Address</h3>
+                           <p>info@risingdigitally.com</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i style="color: #EBAF41;" class="icon icon-phone3"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Phone Number</h3>
+                           <p>+44 7456 44098</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                  </div>
+               </div>
+               <!-- Content row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Footer Main-->
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                     <div class="copyright-info"><span>Copyright © 2023 by Rising Digitally</span></div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="footer-social text-right">
+                     <ul>
+                        <li><a href="https://www.facebook.com/Risingdigitally"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/rising-digitally/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/rising_digitally/"><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- Row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Copyright end-->
+      </footer>
+      <!-- Footer end-->
+
+      <div class="back-to-top affix" id="back-to-top" data-spy="affix" data-offset-top="10">
+         <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i>
+            <!-- icon end-->
+         </button>
+         <!-- button end-->
+      </div>
+      <!-- End Back to Top-->
+
+      <!--
+      Javascript Files
+      
+      ==================================================
+      -->
+      <script>
+         const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.nextElementSibling;
+  const icon = item.querySelector('i');
+
+  item.addEventListener('click', () => {
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        const otherAnswer = otherItem.nextElementSibling;
+        const otherIcon = otherItem.querySelector('i');
+
+        otherAnswer.classList.remove('active');
+        otherIcon.classList.remove('active');
+        otherAnswer.style.maxHeight = "0";
+      }
+    });
+
+    answer.classList.toggle('active');
+    icon.classList.toggle('active');
+    if (answer.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = "0";
+    }
+  });
+});
+      </script>
+      <!-- initialize jQuery Library-->
+      <script type="text/javascript" src="js/jquery.js"></script>
+       
+       
+      <!-- Bootstrap jQuery-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Owl Carousel-->
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <!-- Counter-->
+      <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+      <!-- Waypoints-->
+      <script type="text/javascript" src="js/waypoints.min.js"></script>
+      <!-- Color box-->
+      <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+       
+        
+      <!-- Template custom-->
+      <script type="text/javascript" src="js/custom.js"></script>
+   </div>
+   <!--Body Inner end-->
+</body>
+
+</html>
