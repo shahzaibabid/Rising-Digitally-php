@@ -1,4 +1,7 @@
-
+<?php
+include("connection.php");
+$query= "SELECT fullname, email, whoareyou, lookingfor, message, datatime FROM your_table_name";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

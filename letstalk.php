@@ -1,24 +1,4 @@
-<?php
-include("connection.php");
-if(isset($_POST["submit"])){
-   $name=$_POST["name"];
-   $email=$_POST["email"];
-   $representative=$_POST["representative"];
-   $looking=$_POST["look"];
-   $message=$_POST["message"];
-
-   $query= "INSERT INTO `letstalk-leads`(`id`, `fullname`, `email`, `whoareyou`, `lookingfor`, `message`, `datetime`) VALUES (null,'$name','$email','$representative','$looking','$message', null)";
-   $result = mysqli_query($conn, $query);
-   if ($result) {
-      // Query executed successfully
-      echo '<script>alert("Form has been submited succesfully")</script>'; 
-   } else {
-      // Query failed
-      echo "Error: " . mysqli_error($conn);
-  }
-  }
-
-?> 
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -255,16 +235,13 @@ height: 350px;      }
            <div class="col-sm-6 col-lg-6"  style="background-color: #58BDB3; border-radius: 20px; border-color: black;">
                   
             <section>
-               <form action="letstalk.php"  method="POST">
+               <form action="lets-talk-1.php"  method="POST">
                  <h2 style="color: #000;"><center>We'd Love To Hear From You!</center></h2>
              <input type="text" placeholder="Enter full name" name="name" id="name">
              <input type="email" placeholder="Enter email" name="email" id="email">
              <select name="representative" id="representative">
                <option value="brand">i am a brand</option>
-               <option value="agency">i am a agency</option>
-               <option value="influencer">i am a influencer</option>
-             
-             
+               <option value="agency">i am an agency</option>  
              </select>
              <input type="text" placeholder="What are u looking for?" name="look" id="look">
              <textarea name="message" placeholder="Enter mesage" id="message" cols="30" rows="6"></textarea>

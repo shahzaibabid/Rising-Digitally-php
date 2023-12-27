@@ -1,26 +1,4 @@
-<?php
-include("connection.php");
-if(isset($_POST["submit"])){
-  $iname=$_POST["iname"];
-  $iemail=$_POST["iemail"];
-  $iphone=$_POST["iphone"];
-  $niche=$_POST["iniche"];
-  $icountry=$_POST["icountry"];
-  $iinstal=$_POST["iinstal"];
-  $ifacebookl=$_POST["ifacebookl"];
-  $itiktokl=$_POST["itiktokl"];
-  $iyoutubel=$_POST["iyoutubel"];
 
-  $query = "INSERT INTO `for-influencer`(`id`, `iname`, `iemail`, `iphone`, `iniche`, `icountry`, `iinstal`, `ifacebookl`, `itiktokl`, `youtubel`) VALUES ('null','$iname','$iemail','$iphone','$niche','$icountry','$iinstal','$ifacebookl','$itiktokl','$iyoutubel')";
-  $result=mysqli_query($conn, $query);
-  if($result){
-    echo '<script> alert("Influencer! Your Data has been submited successfuly") </script>';
-  }
-  else{
-    echo "Error" . mysqli_error($conn);
-  }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -471,10 +449,10 @@ border-radius: 20px;
       </div>
       <div class="col-lg-6"  style="background-color: #58BDB3; border-radius: 20px; border-color: black;">
         <div class="contact-submit-box contact-box form-box">
-            <form action="for-influencer.php" method="POST">
+            <form action="for-influencer-form.php" method="POST">
                <div class="error-container"></div><br> <br>
                <div class="row"> 
-                <center> <h3 style="color: #000; font-family:Cursive;">&nbsp;&nbsp;&nbsp;&nbsp;We'd Love To Hear From You!</h3></center>
+                <center> <h3 style="color: #000; font-family:Cursive;">&nbsp;&nbsp;&nbsp;&nbsp;We'd Love To Hear From Influencer!</h3></center>
                   <div class="col-lg-12">
                      <div class="form-group">
                         <input style="border-color: black; background-color:#fff;" class="form-control form-name" id="iname" name="iname" placeholder="Enter Influencer Name" type="text" required="">
@@ -525,7 +503,7 @@ border-radius: 20px;
                </div>
                <!-- Form row end-->
                   <button class="btn btn-primary tw-mt-30 " type="submit" name="submit"><i style="color: #000;" class="fa fa-paper-plane-o"></i>&NonBreakingSpace; Send Data</button>
-            </form>
+                </form>
             <!-- Form end-->
          </div> <br>
       </div>

@@ -1,22 +1,4 @@
-<?php
-include("connection.php");
-if(isset($_POST["submit"])){
-    $name=$_POST["name"];
-    $email=$_POST["email"];
-    $representative=$_POST["representative"];
-    $looking=$_POST["look"];
-    $message=$_POST["message"];
 
-    $query= "INSERT INTO `letstalk-leads`(`id`, `fullname`, `email`, `whoareyou`, `lookingfor`, `message`, `datetime`) VALUES ('null','$name','$email','$representative','$looking','$message', null)";
-    $result= mysqli_query($conn, $query);
-    if($result){
-        echo '<script> alert("Form has been submitted successfuly")</script>';
-    } 
-    else{
-        echo "error:" . mysqli_error ($conn);
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -3587,7 +3569,9 @@ if(isset($_POST["submit"])){
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  
+  .clickhere a{
+    color:red;
+  }
 </style>
         <script type="application/ld+json">
             
@@ -4915,49 +4899,30 @@ With us, you also get expert social media strategies, eye-catching graphics, cri
               <!-- Col end-->
               <div class="col-lg-6" style="background-color: #58BDB3; border-radius: 20px; border-color: black;">
                 <section>
-                    <button class="btn btn-warning active sign-in__button">For-Brand/Influencer</button>
-                    <button class="btn btn-warning register__button">For Influencer</button>
-                    <div class="sign-in__button" style="display: block;">
-                    <form action="index.php"  method="POST">
+                   
+                   
+                    <form action="index-form.php"  method="POST">
                       <h2 style="color: #000;"><center>We'd Love To Hear From You!</center></h2>
                   <input type="text" placeholder="Enter full name" name="name" id="name">
                   <input type="email" placeholder="Enter email" name="email" id="email">
                   <select name="representative" id="representative">
                     <option value="brand">i am a brand</option>
-                    <option value="agency">i am a agency</option>
-                    <option value="influencer">i am a influencer</option>
-                  
-                  
+                    <option value="agency">i am an agency</option>  
                   </select>
                   <input type="text" placeholder="What are u looking for?" name="look" id="look">
                   <textarea name="message" placeholder="Enter mesage" id="message" cols="30" rows="6"></textarea>
                   <button type="submit" class="btn btn-primary" style="color: #000;" name="submit">Submit </button>
 
-                  
+                  <center><h4 style="color:black;">If You are an influencer <a href="for-influencer.php" style="color:red;">click here!</a></h4></center>
+
                     </form>
                     </div>
                   </section>   
                
-             </div>
+           
 
-             <div class="register__button " style="display: none;">
-                    <form action="index.php"  method="POST">
-                      <h2 style="color: #000;"><center>Hear From You!</center></h2>
-                  <input type="text" placeholder="Enter full name" name="name" id="name">
-                  <input type="email" placeholder="Enter email" name="email" id="email">
-                  <select name="representative" id="representative">
-                    <option value="brand">i am a brand</option>
-                    <option value="agency">i am a agency</option>
-                    <option value="influencer">i am a influencer</option>
-                  
-                  
-                  </select>
-                  <input type="text" placeholder="What are u looking for?" name="look" id="look">
-                  <textarea name="message" placeholder="Enter mesage" id="message" cols="30" rows="6"></textarea>
-                  <button type="submit" class="btn btn-primary" style="color: #000;" name="submit">Submit </button>
-
-                  
-                    </form>
+             
+                 
                     </div>
              <!-- Contact form end -->
            </div>
