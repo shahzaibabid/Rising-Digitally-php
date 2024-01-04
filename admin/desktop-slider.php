@@ -291,24 +291,24 @@ fieldset {
     <!-- End Navbar -->
  
       <div class="container">  
-  <form id="contact" action="" method="post" style="background-color:#58BDB3;color:#000;font-family:cursive;">
+  <form id="contact" action="desktop-slider-form.php" method="post" enctype="multipart/form-data" style="background-color:#58BDB3;color:#000;font-family:cursive;">
     <h3 style="font-family:cursive;color:#000;"><b><center>Add Desktop Slider In For-Influencer Page</center></b></h3>
     <!-- <h4>Contact us for custom quote</h4> -->
     <fieldset>
-      <input placeholder="Enter Influencer Name" type="text" tabindex="1" required autofocus>
+      <input placeholder="Enter Influencer Name" type="text" name="iname" tabindex="1" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Niche" type="text" tabindex="3" required>
+      <input placeholder="Enter Influencer Niche" type="text" name="iniche" tabindex="3" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Profile" type="file" tabindex="3" required>
+      <input placeholder="Enter Profile" type="file" tabindex="3" name="fileToUpload">
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Instagram Link" type="url" tabindex="4" required>
+      <input placeholder="Enter Influencer Instagram Link" type="url" name="iinstal" tabindex="4" required>
     </fieldset>
    
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Add New Influencer</button>
+      <button name="submit" type="submit">Add New Influencer</button>
     </fieldset>
   </form>
 </div>

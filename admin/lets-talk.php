@@ -1,6 +1,13 @@
 <?php
 include("connection.php");
-$query= "SELECT fullname, email, whoareyou, lookingfor, message, datatime FROM your_table_name";
+
+// Fetch data from the database
+$query = "SELECT fullname, email, whoareyou, lookingfor, message, datetime FROM `letstalk-leads`"; 
+$result = mysqli_query($conn, $query);
+if (!$result) {
+  // If the query fails, display the error message and stop further execution
+  die("Error: " . mysqli_error($conn));
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +38,47 @@ $query= "SELECT fullname, email, whoareyou, lookingfor, message, datatime FROM y
   body{
     background-color:#000;
   }
+
+  table, th, tr, td {
+  border: 2px solid black;
+  
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #EBAF41;
+    color: #333;
+  }
+
+  tr:nth-child(even) {
+    background-color: #EBAF41;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #EE4F27;
+  }
+
+  tr:hover {
+    background-color: #58BBB1;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
 </style>
 </head>
 
@@ -187,113 +235,36 @@ $query= "SELECT fullname, email, whoareyou, lookingfor, message, datatime FROM y
             </div>
             <div class="card-body px-0 pb-2" style="font-family:cursive; color:#000;">
               <div class="table-responsive">
-                <table class="table align-items-center mb-0" style="color:#000;">
+                <table class="table align-items-center mb-0" style="font-family:cursive;color:#000; padding:20px;">
                   <thead>
                     <tr>
 
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Full Name</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Email</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">who are you?</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Looking-For</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Message</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Date</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Delete Lead</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Full Name</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Email</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">who are you?</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Looking-For</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Message</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Date</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Delete Lead</th>
 
 
                     </tr>
                   </thead>
                   <tbody>
-                   
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> I am a brand </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> smm service</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> whats your pricing structare and what are your pakages?</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 2023-11-12</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> I am a brand </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> smm service</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> whats your pricing structare and what are your pakages?</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 2023-11-12</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr> <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> I am a brand </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> smm service</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> whats your pricing structare and what are your pakages?</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 2023-11-12</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr> <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> shahzaib@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> I am a brand </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> smm service</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> whats your pricing structare and what are your pakages?</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 2023-11-12</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr>
+                  <?php
+                // Loop through the fetched data and display it in table rows
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>";
+                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["fullname"] . "</td>";
+                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["email"] . "</td>";
+                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["whoareyou"] . "</td>";
+                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["lookingfor"] . "</td>";
+                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["message"] . "</td>";
+                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["datetime"] . "</td>";
+                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'><button class='btn btn-danger'>Delete Lead</button></td>";
+                    echo "</tr>";
+                  }
+                  ?>
             
                   </tbody>
                 </table>

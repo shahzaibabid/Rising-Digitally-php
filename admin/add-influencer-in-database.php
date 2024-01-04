@@ -293,54 +293,54 @@ fieldset {
     <!-- End Navbar -->
  
       <div class="container">  
-  <form id="contact" action="" method="post" style="background-color:#58BDB3;color:#000;font-family:cursive;">
+  <form id="contact" action="add-influencer-in-database-form.php" method="post" style="background-color:#58BDB3;color:#000;font-family:cursive;">
     <h3 style="font-family:Cursive;color:#000;"><b><center>Add New Influencers in Database</center></b></h3>
     <!-- <h4>Contact us for custom quote</h4> -->
     <fieldset>
-      <input placeholder="Enter Influencer Name" type="text" tabindex="1" required>
+      <input placeholder="Enter Influencer Name" type="text" tabindex="1" name="diname" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Email" type="email" tabindex="2"  required>
+      <input placeholder="Enter Influencer Email" type="email" tabindex="2" name="diemail"  required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Phone Number" type="tel" tabindex="3" required>
+      <input placeholder="Enter Influencer Phone Number" type="tel" tabindex="3" name="diphone" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Country" type="text" tabindex="3" required>
+      <input placeholder="Enter Influencer Country" type="text" tabindex="3" name="dicountry" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Niche" type="text" tabindex="3" required>
+      <input placeholder="Enter Influencer Niche" type="text" tabindex="3" name="diniche" required>
     </fieldset>
     <fieldset>
     <label for="fileInput" style="color:#000;">Upload Profile:</label>
-      <input placeholder="Enter Profile" type="file" tabindex="3" required>
+      <input placeholder="Enter Profile" type="file" tabindex="3" name="dipicture">
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Facebook Link" type="url" tabindex="4" required>
+      <input placeholder="Enter Influencer Facebook Link" type="url" tabindex="4" name="difacebookl" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Facebook Followers" type="text" tabindex="4" required>
+      <input placeholder="Enter Influencer Facebook Followers" type="text" tabindex="4" name="difacebookf" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Instagram Link" type="url" tabindex="4" required>
+      <input placeholder="Enter Influencer Instagram Link" type="url" tabindex="4" name="diinstal" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Instagram Followers" type="text" tabindex="4" required>
+      <input placeholder="Enter Influencer Instagram Followers" type="text" tabindex="4" name="diinstaf" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer TikTok Link" type="url" tabindex="4" required>
+      <input placeholder="Enter Influencer TikTok Link" type="url" tabindex="4" name="ditiktokl" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer TikTok Followers" type="text" tabindex="4" required>
+      <input placeholder="Enter Influencer TikTok Followers" type="text" tabindex="4" name="ditiktokf" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Youtube Link" type="url" tabindex="4" required>
+      <input placeholder="Enter Influencer Youtube Link" type="url" tabindex="4" name="diyoutubel" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Influencer Youtube Followers" type="text" tabindex="4" required>
+      <input placeholder="Enter Influencer Youtube Followers" type="text" tabindex="4" name="diyoutubef" required>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Add Influencer in Database</button>
+      <button name="submit" type="submit">Add Influencer in Database</button>
     </fieldset>
   </form>
 </div>

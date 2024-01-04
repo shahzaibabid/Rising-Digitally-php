@@ -1,50 +1,3 @@
-<?php
-include("connection.php");
-if(isset($_POST["submit"])){
-  $iname=$_POST["iname"];
-  $iemail=$_POST["iemail"];
-  $iphone=$_POST["iphone"];
-  $icountry=$_POST["icountry"];
-  $iniche=$_POST["iniche"];
-  // $iprofile=$_POST["iprofile"];
-  $ifacebookl=$_POST["ifacebookl"];
-  $ifacebookf=$_POST["ifacebookf"];
-  $iinstal=$_POST["iinstal"];
-  $iinstaf=$_POST["iinstaf"];
-  $itiktokl=$_POST["itiktokl"];
-  $itiktokf=$_POST["itiktokf"];
-  $iyoutubel=$_POST["iyoutubel"];
-  $iyoutubef=$_POST["iyoutubef"];
-  $irecent=$_POST["irecent"];
-  $icollabl=$_POST["icollabl"];
-  $ireportl=$_POST["ireportl"];
-  $target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["iprofile"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["iprofile"]["tmp_name"]);
-  if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File is not an image.";
-    $uploadOk = 0;
-  }
-}
-  $query="INSERT INTO `collaborated-influencer`(`id`, `ciname`, `ciemail`, `ciphone`, `cicountry`, `ciniche`, `cipicture`, `cifacebookl`, `cifacebookf`, `ciinstal`, `ciinstaf`, `citiktokl`, `citiktokf`, `ciyoutubel`, `ciyoutubef`, `cirproject`, `collablink`, `report`) VALUES ('null','$iname','$iemail','$iphone','$icountry','$iniche','$iprofile','$ifacebookl','$ifacebookf','$iinstal','$iinstaf','$itiktokl','$itiktokf', '$iyoutubel','$iyoutubef','$irecent','$icollabl','$ireportl')";
-  $result=mysqli_query($conn, $query);
-  if($result){
-    echo '<script>alert("new collaborated influencer inserted")</script>';
-  }
-  else{
-    echo 'error' . mysqli_error($conn);
-  }
-
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -339,7 +292,7 @@ fieldset {
     <!-- End Navbar -->
  
       <div class="container">  
-  <form id="contact" action="addinfluencer.php" enctype="multipart/form-data" method="POST" style="background-color:#58BDB3;color:#000;font-family:cursive;">
+  <form id="contact" action="addinfluencer-form.php" enctype="multipart/form-data" method="POST" style="background-color:#58BDB3;color:#000;font-family:cursive;">
     <h3 style="font-family:Cursive;color:#000;"><b><center>Add New Collaborated Influencer</center></b></h3>
     <!-- <h4>Contact us for custom quote</h4> -->
     <fieldset>

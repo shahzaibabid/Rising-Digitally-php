@@ -1,4 +1,8 @@
-
+<?php
+include("connection.php");
+$query="SELECT id, iname, iemail, iphone, iniche, icountry, iinstal, ifacebookl, itiktokl, youtubel FROM `for-influencer`";
+$result=mysqli_query($conn, $query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../images/icon/Fav-icon.png">
   <title>
-    Admin Dashboard
+   For Influencers Leads
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -28,6 +32,46 @@
   body{
     background-color:#000;
   }
+  table, th, tr, td {
+  border: 2px solid black;
+  
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #EBAF41;
+    color: #333;
+  }
+
+  tr:nth-child(even) {
+    background-color: #EBAF41;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #EE4F27;
+  }
+
+  tr:hover {
+    background-color: #58BBB1;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
 </style>
 </head>
 
@@ -183,193 +227,70 @@
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive">
-                <table class="table align-items-center mb-0" style="font-family:cursive;color:#000;">
+                <table class="table align-items-center mb-0" style="font-family:cursive;color:#000; padding:20px;">
                   <thead>
                     <tr>
+                    <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Influencer ID</th>
 
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Influencer Name</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Email</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Phone</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Niche</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Country</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Instagram Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Facebook Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">TikTok Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Youtube Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Delete Lead</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Influencer Name</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Email</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Phone</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Niche</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Country</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Instagram Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Facebook Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">TikTok Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Youtube Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Delete Lead</th>
 
                     </tr>
                   </thead>
                   <tbody>
-                   
+                  
+                   <?php
+                   while($row=mysqli_fetch_assoc($result)){
+                  
+                   ?>
                     <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> marial</span>
+                    <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["id"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> <a href="mailto:marial@hotmail.com">marial@hotmail.com</a></span>
+                    <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["iname"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +1678279349 </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <a href="mailto: <?php $row["iemail"]; ?>"><?php echo $row["iemail"] ?></a></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["iphone"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold">US</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["iniche"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["icountry"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["iinstal"] ?></span>
                       </td>
-                       <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> marial</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> <a href="mailto:marial@hotmail.com">marial@hotmail.com</a></span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +1678279349 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold">US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ifacebookl"] ?></span>
                       </td>
                      
-                      <td class="align-middle text-center text-sm">
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["itiktokl"] ?></span>
+                      </td>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <?php echo $row["youtubel"] ?></span>
+                      </td>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
                       <button class="btn btn-danger">Delete Lead</button>    
                     </td>
                     </tr>
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> marial</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> <a href="mailto:marial@hotmail.com">marial@hotmail.com</a></span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +1678279349 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold">US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com</span>
-                      </td>
-                     
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr>
-                   
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> marial</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> <a href="mailto:marial@hotmail.com">marial@hotmail.com</a></span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +1678279349 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold">US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com</span>
-                      </td>
-                     
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> marial</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> <a href="mailto:marial@hotmail.com">marial@hotmail.com</a></span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +1678279349 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold">US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com</span>
-                      </td>
-                     
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete Lead</button>    
-                    </td>
-                    </tr>
-                   
-            
+            <?php
+          }
+          ?>
+          <br>
                   </tbody>
                 </table>
               </div>
@@ -379,6 +300,9 @@
       
       </div>
   
+      <!-- testing table -->
+
+      <!-- testing table -->
   <!--   Core JS Files   -->
   <script src="../admin/assets/js/core/popper.min.js"></script>
   <script src="../admin/assets/js/core/bootstrap.min.js"></script>

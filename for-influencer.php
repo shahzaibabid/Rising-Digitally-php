@@ -1,4 +1,6 @@
-
+<?php
+   include("connection.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1879,6 +1881,62 @@ border-radius: 20px;
   </div>
 </section>
 
+<!-- while loop in desktop slider -->
+<h2 style="text-align: center;">Influencers worked With Us</h2>
+<br>
+<div class="container d-none d-md-block">
+  <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+   
+           
+        <div class="row">
+        <?php   
+      $query="SELECT iname, iniche, iinstalink FROM `desktop-slider`";
+
+      $result=mysqli_query($conn, $query);
+      
+        while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+          <div class="col-lg-3 col-sm-3 round">
+            <img src="./images/services/5.jpg" alt="">
+            <div class="image-overlay">
+              <h4 style="color: #fff;"><?php echo $row["iname"]?></h4>
+              <h6 class="category"  style="color: #fff;"><?php echo $row["iniche"]?></h6>
+              <a href="<?php echo $row["iinstalink"]?>" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <?php
+            }
+          ?>
+     
+        </div>
+        
+      </div>
+  
+     
+      
+    
+  
+    
+
+
+    
+      
+    </div>
+    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+
+<!-- while loop in dektop slider -->
 
 <!-- Call to action end -->
          <!-- Footer start-->
