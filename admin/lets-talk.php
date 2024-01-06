@@ -4,7 +4,7 @@ include("connection.php");
 // Fetch data from the database
 $query = "SELECT fullname, email, whoareyou, lookingfor, message, datetime FROM `letstalk-leads`"; 
 $result = mysqli_query($conn, $query);
-if (!$result) {
+ if (!$result) {
   // If the query fails, display the error message and stop further execution
   die("Error: " . mysqli_error($conn));
 }
@@ -95,7 +95,7 @@ table {
     <div class="collapse navbar-collapse  w-auto" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white active" href="../admin/influencer-collab.php">
+          <a class="nav-link text-white" href="../admin/influencer-collab.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons">face_2 </i>
             </div>
@@ -261,7 +261,8 @@ table {
                     echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["lookingfor"] . "</td>";
                     echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["message"] . "</td>";
                     echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["datetime"] . "</td>";
-                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'><button class='btn btn-danger'>Delete Lead</button></td>";
+                    echo "<td><a href='delete.php?deleteid=" . $row['id'] . "' class='btn btn-danger'>Delete</a></td>";
+                    
                     echo "</tr>";
                   }
                   ?>

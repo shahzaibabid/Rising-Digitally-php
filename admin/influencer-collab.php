@@ -1,13 +1,13 @@
 <?php
 include("connection.php");
-if($_SESSION['username'] !=null){
-  ?>
-  <Script>
-   window.location.assign("./admin-login.php");
-  </script>
-<?php
+ $query = "SELECT id, ciname, ciemail, ciphone, cicountry, ciniche, cipicture, cifacebookl, cifacebookf, ciinstal, ciinstaf, citiktokl, citiktokf, ciyoutubel, ciyoutubef, cirproject, collablink, report FROM `collaborated-influencer`"; 
+ $result = mysqli_query($conn, $query);
+if (!$result) {
+  // If the query fails, display the error message and stop further execution
+  die("Error: " . mysqli_error($conn));
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,6 +94,47 @@ body{
     border: 1px solid #ccc;
   }
 }
+
+
+table, th, tr, td {
+  border: 2px solid black;
+  
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #EBAF41;
+    color: #333;
+  }
+
+  tr:nth-child(even) {
+    background-color: #EBAF41;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #EE4F27;
+  }
+
+  tr:hover {
+    background-color: #58BBB1;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 </style>
 </head>
@@ -191,11 +232,11 @@ body{
   </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="false">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
         
-          <h6 class="font-weight-bolder mb-0" style="color:#fff">Admin Dashboard</h6>
+          <h6 class="font-weight-bolder mb-0" style="color:#fff;">Admin Dashboard</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -349,157 +390,100 @@ body{
                 <table class="table align-items-center mb-0" style="color:#000;font-family:cursive;">
                   <thead>
                     <tr>
-
-                      <th class="text-uppercase  text-xxs font-weight-bolder opacity-7">Influencer Name</th>
-                      <th class="text-center text-uppercase  text-xxs font-weight-bolder opacity-7">Email</th>
-                      <th class="text-center text-uppercase  text-xxs font-weight-bolder opacity-7">Phone Number</th>
-                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7">Country</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Niche</th>
-                      <th class="text-uppercase  text-xxs font-weight-bolder opacity-7">Profile Pic</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Fb Link </th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Fb Followers </th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Insta Link </th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Insta Followers </th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">TikTok Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">TikTok Followers</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Yt Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Yt Followers</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Recent_Project</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Collaboration_Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Report</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Edit</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Delete</th>
+                    <th class="text-uppercase  text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">ID</th>
+                      <th class="text-uppercase  text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Influencer Name</th>
+                      <th class="text-center text-uppercase  text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Email</th>
+                      <th class="text-center text-uppercase  text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Phone Number</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Country</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Niche</th>
+                      <th class="text-uppercase  text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Profile Pic</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Fb Link </th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Fb Followers </th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Insta Link </th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Insta Followers </th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">TikTok Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">TikTok Followers</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Youtube Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Youtube Followers</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Recent_Project</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Collaboration_Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Report</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Edit</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Delete</th>
 
                     </tr>
                   </thead>
                   <tbody>
-                   
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> Micheal</span>
+                   <?php
+                   while($row = mysqli_fetch_assoc($result)){
+                   ?>
+                  <tr>
+                    <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["id"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> mic@gmail.com</span>
+                    <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ciname"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +123687654 </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <a href="mailto: <?php $row["ciemail"]; ?>"><?php echo $row["ciemail"] ?></a></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> US</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ciphone"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["cicountry"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                      <div>
-                            <img src="../images/services/nadsmarkiz.jpg" class="avatar avatar-sm me-3" alt="xd">
-                        </div>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ciniche"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["cipicture"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 2.3k </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["cifacebookl"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["cifacebookf"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 100k </span>
+                     
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ciinstal"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <?php echo $row["ciinstaf"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 5.2M</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["citiktokl"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <?php echo $row["citiktokf"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 103K</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ciyoutubel"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> bradyl box</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <?php echo $row["ciyoutubef"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> https://www.instagram.com/p/CxaPmfEu9Vl/</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["cirproject"] ?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-warning">Report</button>  
-                     </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-success">Edit</button>  
-                     </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete</button>    
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <?php echo $row["collablink"] ?></span>
+                      </td>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                      <button class="btn btn-warning" style="color:#000;"><a href="<?php echo $row["report"] ?>">Report</a></button>    
                     </td>
-                      
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                      <button class="btn btn-success" style="color:#000;">Edit</button>    
+                    </td>
+                    <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                      <button class="btn btn-danger" style="color:#000;">Delete</button>    
+                    </td>
                     </tr>
                  
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> Micheal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> mic@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +123687654 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <div>
-                            <img src="../images/services/nadsmarkiz.jpg" class="avatar avatar-sm me-3" alt="xd">
-                        </div>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 2.3k </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 100k </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 5.2M</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 103K</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> bradyl box</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> https://www.instagram.com/p/CxaPmfEu9Vl/</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-warning">Report</button>  
-                     </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-success">Edit</button>  
-                     </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete</button>    
-                    </td>
-                      
-                    </tr>
-            
+            <?php
+                   }
+            ?>
                   </tbody>
                 </table>
               </div>

@@ -1,3 +1,12 @@
+<?php
+include("connection.php");
+$query="SELECT diname, diemail, diphone, dicountry, diniche, difacebookl, difacebookf, diinstal, diinstaf, ditiktokl, ditiktokf, diyoutubel, diyoutubef FROM `database-influencer`";
+$result=mysqli_query($conn, $query);
+if (!$result) {
+  // If the query fails, display the error message and stop further execution
+  die("Error: " . mysqli_error($conn));
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,6 +93,47 @@
   }
 }
 
+
+table, th, tr, td {
+  border: 2px solid black;
+  
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #EBAF41;
+    color: #333;
+  }
+
+  tr:nth-child(even) {
+    background-color: #EBAF41;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #EE4F27;
+  }
+
+  tr:hover {
+    background-color: #58BBB1;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
 </style>
 </head>
 
@@ -108,7 +158,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="../admin/add-influencer-list.php">
+          <a class="nav-link text-white" href="../admin/addinfluencer.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">list</i>
           </div>
@@ -180,7 +230,7 @@
   </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="false">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
         
@@ -338,22 +388,22 @@
                   <thead>
                     <tr>
 
-                      <th class="text-uppercase  text-xxs font-weight-bolder opacity-7">Influencer Name</th>
-                      <th class="text-center text-uppercase  text-xxs font-weight-bolder opacity-7">Email</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Phone Number</th>
-                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7">Country</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Niche</th>
-                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7">Profile Pic</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Facebook Link </th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Fb Followers</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Instagram Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Insta Followers</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">TikTok Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">TikTok Followers</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Youtube Link</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Youtube Followers</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Edit Data</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder opacity-7">Delete Data</th>
+                      <th class="text-uppercase  text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Influencer Name</th>
+                      <th class="text-center text-uppercase  text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Email</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Phone Number</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Country</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Niche</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Profile Pic</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Facebook Link </th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Fb Followers</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Instagram Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Insta Followers</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">TikTok Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">TikTok Followers</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Youtube Link</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Youtube Followers</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Edit Data</th>
+                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Delete Data</th>
 
 
 
@@ -361,53 +411,56 @@
                     </tr>
                   </thead>
                   <tbody>
-                 
+                 <?php
+                 while($row = mysqli_fetch_assoc($result)){
+                 ?>
+                  
                     <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> Micheal</span>
+                    <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <?php echo $row["diname"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> mic@gmail.com</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["diemail"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +123687654 </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"> <?php echo $row["diphone"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> US</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["dicountry"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["diniche"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
                       <div>
-                            <img src="../images/services/nadsmarkiz.jpg" class="avatar avatar-sm me-3" alt="xd">
+                            <img src="<?php echo $row["dipicture"]?>" class="avatar avatar-sm me-3" alt="xd">
                         </div>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["difacebookl"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 200k </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["difacebookf"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["diinstal"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 1.1 M</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["diinstaf"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ditiktokl"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 790k</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["ditiktokf"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com </span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["diyoutubel"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 102k</span>
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
+                        <span class="text-xs font-weight-bold"><?php echo $row["diyoutubef"]?></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
+                      <td class="align-middle text-center text-sm" style="border: 2px solid black;">
                       <button class="btn btn-success">Edit</button>  
                      </td>
                       <td class="align-middle text-center text-sm">
@@ -415,165 +468,9 @@
                     </td>
                       
                     </tr>
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> Micheal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> mic@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +123687654 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <div>
-                            <img src="../images/services/nadsmarkiz.jpg" class="avatar avatar-sm me-3" alt="xd">
-                        </div>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 200k </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 1.1 M</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 790k</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 102k</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-success">Edit</button>  
-                     </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete</button>    
-                    </td>
-                      
-                    </tr>
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> Micheal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> mic@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +123687654 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <div>
-                            <img src="../images/services/nadsmarkiz.jpg" class="avatar avatar-sm me-3" alt="xd">
-                        </div>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 200k </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 1.1 M</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 790k</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 102k</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-success">Edit</button>  
-                     </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete</button>    
-                    </td>
-                      
-                    </tr>
-                    <tr>
-                    <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> Micheal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> mic@gmail.com</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> +123687654 </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> US</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> beauty</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <div>
-                            <img src="../images/services/nadsmarkiz.jpg" class="avatar avatar-sm me-3" alt="xd">
-                        </div>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> facebook.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 200k </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> instagram.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 1.1 M</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> tiktok.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 790k</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> youtube.com </span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> 102k</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-success">Edit</button>  
-                     </td>
-                      <td class="align-middle text-center text-sm">
-                      <button class="btn btn-danger">Delete</button>    
-                    </td>
-                      
-                    </tr>
+                   <?php
+                    }
+                    ?>
                  </tbody>
                 </table>
               </div>
