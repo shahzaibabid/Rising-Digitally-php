@@ -293,7 +293,7 @@ fieldset {
     <!-- End Navbar -->
  
       <div class="container">  
-  <form id="contact" action="add-influencer-in-database-form.php" method="post" style="background-color:#58BDB3;color:#000;font-family:cursive;">
+  <form id="contact" action="add-influencer-in-database-form.php" method="post" enctype="multipart/form-data" style="background-color:#58BDB3;color:#000;font-family:cursive;">
     <h3 style="font-family:Cursive;color:#000;"><b><center>Add New Influencers in Database</center></b></h3>
     <!-- <h4>Contact us for custom quote</h4> -->
     <fieldset>
@@ -313,7 +313,7 @@ fieldset {
     </fieldset>
     <fieldset>
     <label for="fileInput" style="color:#000;">Upload Profile:</label>
-      <input placeholder="Enter Profile" type="file" tabindex="3" name="dipicture">
+      <input placeholder="Enter Profile" type="file" tabindex="3" name="file">
     </fieldset>
     <fieldset>
       <input placeholder="Enter Influencer Facebook Link" type="url" tabindex="4" name="difacebookl" required>

@@ -1,6 +1,6 @@
 <?php
 include("connection.php");
-$query="SELECT diname, diemail, diphone, dicountry, diniche, difacebookl, difacebookf, diinstal, diinstaf, ditiktokl, ditiktokf, diyoutubel, diyoutubef FROM `database-influencer`";
+$query="SELECT * FROM `database-influencer`";
 $result=mysqli_query($conn, $query);
 if (!$result) {
   // If the query fails, display the error message and stop further execution
@@ -411,54 +411,54 @@ table {
                     </tr>
                   </thead>
                   <tbody>
-                 <?php
-                 while($row = mysqli_fetch_assoc($result)){
-                 ?>
+                  <?php
+                  if(mysqli_num_rows($result)){
+                  while($row = mysqli_fetch_array($result)){
+                   ?>
                   
                     <tr>
                     <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"> <?php echo $row["diname"]?></span>
+                        <span class="text-xs font-weight-bold"> <?php echo $row["1"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["diemail"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["2"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"> <?php echo $row["diphone"]?></span>
+                        <span class="text-xs font-weight-bold"> <?php echo $row["3"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["dicountry"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["4"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["diniche"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["5"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                      <div>
-                            <img src="<?php echo $row["dipicture"]?>" class="avatar avatar-sm me-3" alt="xd">
-                        </div>
+                        
+                        <img src='../image/database/<?php echo $row["6"]; ?>' width="100px">
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["difacebookl"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["7"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["difacebookf"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["8"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["diinstal"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["9"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["diinstaf"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["10"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["ditiktokl"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["11"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["ditiktokf"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["12"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["diyoutubel"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["13"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
-                        <span class="text-xs font-weight-bold"><?php echo $row["diyoutubef"]?></span>
+                        <span class="text-xs font-weight-bold"><?php echo $row["14"]?></span>
                       </td>
                       <td class="align-middle text-center text-sm" style="border: 2px solid black;">
                       <button class="btn btn-success">Edit</button>  
@@ -469,7 +469,7 @@ table {
                       
                     </tr>
                    <?php
-                    }
+                    }}
                     ?>
                  </tbody>
                 </table>

@@ -1,13 +1,6 @@
 <?php
 include("connection.php");
 
-// Fetch data from the database
-$query = "SELECT fullname, email, whoareyou, lookingfor, message, datetime FROM `letstalk-leads`"; 
-$result = mysqli_query($conn, $query);
- if (!$result) {
-  // If the query fails, display the error message and stop further execution
-  die("Error: " . mysqli_error($conn));
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -235,40 +228,51 @@ table {
             </div>
             <div class="card-body px-0 pb-2" style="font-family:cursive; color:#000;">
               <div class="table-responsive">
-                <table class="table align-items-center mb-0" style="font-family:cursive;color:#000; padding:20px;">
-                  <thead>
-                    <tr>
+              <table class="table align-items-center mb-0" style="font-family: cursive; color: #000; padding: 20px;">
+    <thead>
+        <tr>
+            <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color: #ebaf41; color: #000;">Full Name</th>
+            <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color: #ebaf41; color: #000;">Email</th>
+            <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color: #ebaf41; color: #000;">Who are you?</th>
+            <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color: #ebaf41; color: #000;">Looking-For</th>
+            <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color: #ebaf41; color: #000;">Message</th>
+            <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color: #ebaf41; color: #000;">Date</th>
+            <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color: #ebaf41; color: #000;">Delete Lead</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+      
+        $cmp = "SELECT * FROM `letstalk-leads`";
+        $result3 = mysqli_query($conn, $cmp);
+        $cp = mysqli_num_rows($result3);
+        if ($cp) {
+            $i = 0;
+            while ($row3 = mysqli_fetch_array($result3)) {
+                $i++;
+        ?>
+                <tr>
+                    <td class="align-middle" style="border: 2px solid black;"><?php echo $row3[1]; ?></td>
+                    <td class="align-middle" style="border: 2px solid black;"><?php echo $row3[2]; ?></td>
+                    <td class="align-middle" style="border: 2px solid black;"><?php echo $row3[3]; ?></td>
+                    <td class="align-middle" style="border: 2px solid black;"><?php echo $row3[4]; ?></td>
+                    <td class="align-middle" style="border: 2px solid black;"><?php echo $row3[5]; ?></td>
+                    <td class="align-middle" style="border: 2px solid black;"><?php echo $row3[6]; ?></td>
 
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Full Name</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Email</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">who are you?</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Looking-For</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Message</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Date</th>
-                      <th class="text-center text-uppercase text-xxs font-weight-bolder" style="background-color:#EBAF41;color:#000;">Delete Lead</th>
+                    <td class="align-middle">
+                        <form method="post" action="delete.php">
+                            <input type="hidden" name="delete_id" value="<?php echo $row3['id']; ?>">
+                            <button type="submit" name="submit2" class="badge bg-danger rounded-pill badge-sm">DELETE</button>
+                        </form>
+                    </td>
+                </tr>
+        <?php
+            }
+        }
+        ?>
+    </tbody>
+</table>
 
-
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <?php
-                // Loop through the fetched data and display it in table rows
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>";
-                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["fullname"] . "</td>";
-                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["email"] . "</td>";
-                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["whoareyou"] . "</td>";
-                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["lookingfor"] . "</td>";
-                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["message"] . "</td>";
-                    echo "<td class='align-middle text-center text-sm' style='border: 2px solid black;'>" . $row["datetime"] . "</td>";
-                    echo "<td><a href='delete.php?deleteid=" . $row['id'] . "' class='btn btn-danger'>Delete</a></td>";
-                    
-                    echo "</tr>";
-                  }
-                  ?>
-            
-                  </tbody>
-                </table>
               </div>
             </div>
           </div>

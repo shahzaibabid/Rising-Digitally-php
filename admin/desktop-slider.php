@@ -301,7 +301,7 @@ fieldset {
       <input placeholder="Enter Influencer Niche" type="text" name="iniche" tabindex="3" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Profile" type="file" tabindex="3" name="fileToUpload">
+      <input placeholder="Enter Profile" type="file" tabindex="3" name="file">
     </fieldset>
     <fieldset>
       <input placeholder="Enter Influencer Instagram Link" type="url" name="iinstal" tabindex="4" required>

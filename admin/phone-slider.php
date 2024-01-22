@@ -290,7 +290,7 @@ fieldset {
     <!-- End Navbar -->
  
       <div class="container">  
-  <form id="contact" action="phone-slider-form.php" method="post" encytype="multipart/form-data" style="background-color:#58BDB3;color:#000;font-family:cursive;">
+  <form id="contact" action="phone-slider-form.php" method="post" enctype="multipart/form-data" style="background-color:#58BDB3;color:#000;font-family:cursive;">
     <h3 style="font-family:cursive;color:#000;"><b><center>Add Phone Slider In For-Influencer Page</center></b></h3>
     <!-- <h4>Contact us for custom quote</h4> -->
     <fieldset>
@@ -300,7 +300,7 @@ fieldset {
       <input placeholder="Enter Influencer Niche" type="text" name="iniche" tabindex="3" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Enter Profile" type="file" name="iprofile" tabindex="3">
+      <input placeholder="Enter Profile" type="file" name="file" tabindex="3">
     </fieldset>
     <fieldset>
       <input placeholder="Enter Influencer Instagram Link" type="url" name="iinstal" tabindex="4" required>

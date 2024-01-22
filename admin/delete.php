@@ -1,39 +1,18 @@
 <?php
-
-$db= $conn;
-$tableName="letstalk-leads";
-if(isset($_GET['delete']))
-{
-  $id= validate($_GET['delete']);
-  $condition =['id'=>$id];
-  $deleteMsg=delete_data($db, $tableName, $condition);
-  header("location:form.php");
-
-}
-function delete_data($db, $tableName, $condition){
-
-    $conditionData='';
-    $i=0;
-    foreach($condition as $index => $data){
-        $and = ($i > 0)?' AND ':'';
-         $conditionData .= $and.$index." = "."'".$data."'";
-         $i++;
+include("connection.php");
+  if (isset($_POST["submit2"])) {
+    $delete_id = $_POST["delete_id"];
+    $del_query = "DELETE FROM `letstalk-leads` WHERE `id` = $delete_id";
+    $del_result = mysqli_query($conn, $del_query);
+    if ($del_result) {
+        // Deletion successful, redirect to the same page
+   echo '<script> alert("data deleted successfully")
+    window.location.href="lets-talk.php"  
+    </script>';
+       exit();
+    } else {
+        // Handle deletion error
+        echo "Error: " . mysqli_error($conn);
     }
-
-  $query= "DELETE FROM ".$tableName." WHERE ".$conditionData;
-  $result= $db->query($query);
-  if($result){
-    $msg="data was deleted successfully";
-  }else{
-    $msg= $db->error;
-  }
-  return $msg;
-}
-
-function validate($value) {
-$value = trim($value);
-$value = stripslashes($value);
-$value = htmlspecialchars($value);
-return $value;
 }
 ?>

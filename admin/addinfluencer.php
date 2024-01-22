@@ -312,7 +312,7 @@ fieldset {
     </fieldset>
     <fieldset>
     <label for="fileInput" style="color:#000;">Upload Profile:</label>
-      <input placeholder="Enter Profile" type="file" tabindex="3" name="iprofile">
+      <input placeholder="Enter Profile" type="file" tabindex="3" name="file">
     </fieldset>
     <fieldset>
       <input placeholder="Enter Influencer Facebook Link" type="url" name="ifacebookl" tabindex="4">
